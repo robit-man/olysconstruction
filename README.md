@@ -1,4 +1,4 @@
-# Generic Auth App
+$OPOE
 
 ## Project setup
 ```
@@ -18,6 +18,11 @@ npm run build
 ### Lints and fixes files
 ```
 npm run lint
+```
+
+### Use node 16 when deploying
+```
+NODE_VERSION = 16.x.x
 ```
 
 ### Customize configuration
