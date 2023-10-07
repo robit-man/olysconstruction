@@ -4,8 +4,8 @@
       <h1 v-if="finished" style="color:rgba(255,200,0);">{{ finalText }}</h1>
       <h1 v-if="!finished" :style="{color: 'rgba(255,200,0)', position: 'relative', margin: 0}" v-html="html"></h1>
 <div class="ring">
-    <div class="swap"><img src="swap.svg" style="animation:spin 5s ease infinite;width:64px;height:64px;position:absolute;right:3rem;top:-3rem;" alt=""></div>
-    <div class="doge"><img style="width:256px;position:absolute;left:48px;top:20px;opacity:0.5;" src="doge.png" alt=""></div>
+   <div class="swap-cont"> <div class="swap"><img src="swap.svg" style="width:64px;height:64px;" alt=""></div></div>
+    <div class="doge"><img style="width:256px;position:absolute;left:48px;opacity:0.5;" src="doge.png" alt=""></div>
       <div class="eth"><div class="pyramid">
     <div class="square">
       <div class="triangle"></div>
@@ -131,6 +131,8 @@ body {
     margin: auto;
   }
 }
+.swap-cont{position:absolute;right:3rem;top:2rem;}
+.swap{animation:spin 5s ease infinite;display:flex;flex-flow:row;justify-content:center;}
 
 h1 {text-align:center;
   font-weight: 100;
@@ -139,8 +141,15 @@ h1 {text-align:center;
 
 .ring{overflow:hidden;margin:auto;margin-bottom:2rem;margin-top:2rem;display:flex;flex-flow:column;justify-content:center;width:256px;height:256px;backdrop-filter:blur(5px)brightness(1.5);box-shadow:inset 0px 0px 10px  rgba(255,200,0,1), 0px 0px 10px  rgba(255,200,0,1); border:5px solid rgba(255,200,0,1);border-radius:1000px;}
 
-
-
+@keyframes floaty {
+    0%{top:20px;}
+    20%{top:20px;}
+    50%{top:0px;}
+    70%{top:20px;}
+    100%{top:20px;}
+    
+}
+.doge{animation:floaty 5s ease infinite;}
 @keyframes rotate {
   from {
     transform: rotateX($r) rotateZ(45deg) translateZ(-.5rem);
@@ -155,18 +164,21 @@ h1 {text-align:center;
 
 @keyframes spin {
   0% {
-    transform: rotate(0deg);
+    transform: rotate(0deg);opacity:0;
   }
-  10% {    
-    transform: rotate(-20deg);
+  10% {
+    transform: rotate(0deg);opacity:0.2;
+  }
+  20% {    
+    transform: rotate(-20deg)scale(1.1);opacity:0.5;
 
   }
   90% {    
-    transform: rotate(380deg);
+    transform: rotate(380deg);opacity:0;
 
   }
   100% {
-    transform: rotate(360deg);
+    transform: rotate(360deg);opacity:0;
   }
 }
 
