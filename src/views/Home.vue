@@ -1,6 +1,6 @@
 <template>
     <CanvasAnimation />
-    <div class="front" style="width:512px;height:512px;position:absolute;left:calc(50vw - 256px);top:5vh;">
+    <div class="front" style="">
       <h1 v-if="finished" style="color:rgba(255,200,0);">{{ finalText }}</h1>
       <h1 v-if="!finished" :style="{color: 'rgba(255,200,0)', position: 'relative', margin: 0}" v-html="html"></h1>
 <div class="ring">
@@ -33,7 +33,8 @@
     <a href="https://t.me/OPOEthereum" targat="_blank"><img style="height:48px;width:48px;margin:8px;filter:invert(1)hue-rotate(185deg)brightness(4);" src="telegram.svg" alt=""><p>TELEGRAM</p></a>
     <a href="https://twitter.com/OPOEthereum" targat="_blank"><img style="height:48px;width:48px;margin:8px;filter:invert(1)hue-rotate(185deg)brightness(4);" src="x.png" alt=""><p>X CORP</p></a>
   </div>
-    </div>
+  <p  @click="copyToClipboard('0x33CAF58D14d7cd284cc2D7F2bc878D2D63C8956A')" style="cursor:pointer;max-width:calc(100vw - 2rem);text-align: center;margin:auto;margin-top:2rem;border:1px solid rgba(255, 200,0,1);width:max-content;padding:0.2rem 0.5rem;border-radius:4px;">0x33CAF58D14d7cd284cc2D7F2bc878D2D63C8956A</p>
+  <span v-if="copied"><p style="text-align: center;margin:auto;">Copied!</p></span> </div>
   </template>
   
   <script>
@@ -45,6 +46,39 @@
       CanvasAnimation,
     },
     setup() {
+const copied = ref(false); // A ref to manage the state of the copy operation
+
+const copyToClipboard = (text) => {
+  if (navigator.clipboard) {
+    navigator.clipboard.writeText(text).then(() => {
+      copied.value = true;
+
+      setTimeout(() => {
+        copied.value = false;
+      }, 2000); // Reset the copied state after 2 seconds
+    }).catch(err => console.error('Could not copy text: ', err));
+  } else {
+    // Fallback for older browsers
+    const textArea = document.createElement("textarea");
+    textArea.value = text;
+    document.body.appendChild(textArea);
+    textArea.focus();
+    textArea.select();
+
+    try {
+      const successful = document.execCommand('copy');
+      copied.value = successful;
+      
+      setTimeout(() => {
+        copied.value = false;
+      }, 2000); // Reset the copied state after 2 seconds
+    } catch (err) {
+      console.error('Unable to copy', err);
+    }
+
+    document.body.removeChild(textArea);
+  }
+};
       const finalText = 'ONLY POSSIBLE ON ETHEREUM';
       const html = ref('');
       const finished = ref(false);
@@ -102,7 +136,8 @@
   });
 });
   
-      return { html, finalText, finished };
+      return { html, finalText, finished,  copied, 
+  copyToClipboard };
     },
   };
   </script>
@@ -181,7 +216,9 @@ h1 {text-align:center;
     transform: rotate(360deg);opacity:0;
   }
 }
-
+.front{
+    margin:auto;width:512px;height:512px;position:relative;left:calc(50vw - 50%);top:5vh;max-width:calc(100vw - 2rem);
+}
 .copy{text-align:center;}
 
 .eth {position:relative;
