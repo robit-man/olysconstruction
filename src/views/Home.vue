@@ -1,316 +1,199 @@
 <template>
-    <CanvasAnimation />
-    <div class="front" style="">
-      <h1 v-if="finished" style="color:rgba(255,200,0);">{{ finalText }}</h1>
-      <h1 v-if="!finished" :style="{color: 'rgba(255,200,0)', position: 'relative', margin: 0}" v-html="html"></h1>
-<div class="ring">
-   <div class="swap-cont"> <div class="swap"><img src="swap.svg" style="width:64px;height:64px;" alt=""></div></div>
-    <div class="doge"><img style="width:256px;position:absolute;left:48px;opacity:0.5;" src="doge.png" alt=""></div>
-      <div class="eth"><div class="pyramid">
-    <div class="square">
-      <div class="triangle"></div>
-      <div class="triangle"></div>
-      <div class="triangle"></div>
-      <div class="triangle"></div>
-    </div>
+  <div style="display:flex;flex-flow:wrap;justify-content:center;height:100vh;width:100vw;">
+ <div class="video-wrapper" style="user-select:none;pointer-events:none;margin:auto 1rem ;overflow:hidden;height:400px;border-radius:10px;z-index:2;">
+    <video style="margin:auto;"
+      ref="videoPlayer"
+      autoplay
+      muted
+      loop
+      controls
+      width="640" height="800">
+      <!-- Add your video source here -->
+      <source src="sakuradiner.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video></div> <div class="video-wrapper" style="position:absolute;  top: calc(50vh - 200px);  transform: scale(1.5);margin-left:-640px;filter:blur(100px)brightness(1.5);user-select:none;pointer-events:none;margin:auto;overflow:hidden;height:400px;border-radius:10px;">
+    <video style="margin:auto;"
+      ref="videoPlayer"
+      autoplay
+      muted
+      loop
+      controls
+      width="640" height="800">
+      <!-- Add your video source here -->
+      <source src="sakuradiner.mp4" type="video/mp4">
+      Your browser does not support the video tag.
+    </video></div> <a class="link" href="https://twitter.com/StarryNightDAO"><div >StarryNightDAO</div></a>  <canvas style="width:100vw;height:100vh;position:fixed;" ref="sakuraCanvas"></canvas>
   </div>
-  
-  <div class="pyramid inverse">
-    <div class="square">
-      <div class="triangle"></div>
-      <div class="triangle"></div>
-      <div class="triangle"></div>
-      <div class="triangle"></div>
-    </div></div>
-  </div></div>
+</template>
 
-  <div class="copy"><p>Stealth launched as a memecoin and with no promises or expectations, we decided to build a new protocol which solves the multichain bridge problem for non-EVM compatible systems. Our experienced team has created invaluable depth to human capital both tangible and intangible. Try our bridge today!</p></div>
+<script>
+export default {
+  name: 'AutoPlayVideo',
+  mounted() {
+    this.$refs.videoPlayer.play().catch(error => {
+      console.error("Error attempting to play the video:", error);
+    });
+     const requestAnimFrame = (function(){
+      return  window.requestAnimationFrame       ||
+              window.webkitRequestAnimationFrame ||
+              window.mozRequestAnimationFrame    ||
+              window.oRequestAnimationFrame      ||
+              window.msRequestAnimationFrame     ||
+              function(callback){
+                window.setTimeout(callback, 1000 / 60);
+              };
+    })();
 
-  <div class="row" style="display:flex;flex-flow:wrap;gap:1rem;justify-content: space-between;margin-top:2rem;">
-
-    <a href="https://etherscan.io/token/0x33caf58d14d7cd284cc2d7f2bc878d2d63c8956a" targat="_blank"><img style="height:48px;margin:8px;filter:hue-rotate(210deg)brightness(2);" src="ether-scan.png" alt=""><p>ETHERSCAN</p></a>
-    <a href="https://www.dextools.io/app/en/ether/pair-explorer/0xf60028379c813a559711bd7bd0b238261b9a648f" targat="_blank"><img style="height:64px;width:64px;filter:hue-rotate(185deg)brightness(4);" src="dextools_logo.png" alt=""><p>DEXTOOLS</p></a>
-    <a href="https://t.me/OPOEthereum" targat="_blank"><img style="height:48px;width:48px;margin:8px;filter:invert(1)hue-rotate(185deg)brightness(4);" src="telegram.svg" alt=""><p>TELEGRAM</p></a>
-    <a href="https://twitter.com/OPOEthereum" targat="_blank"><img style="height:48px;width:48px;margin:8px;filter:invert(1)hue-rotate(185deg)brightness(4);" src="x.png" alt=""><p>X CORP</p></a>
-  </div>
-  <p  @click="copyToClipboard('0x33CAF58D14d7cd284cc2D7F2bc878D2D63C8956A')" style="cursor:pointer;max-width:calc(100vw - 2rem);text-align: center;margin:auto;margin-top:2rem;border:1px solid rgba(255, 200,0,1);width:max-content;padding:0.2rem 0.5rem;border-radius:4px;">0x33CAF58D14d7cd284cc2D7F2bc878D2D63C8956A</p>
-  <span v-if="copied"><p style="text-align: center;margin:auto;">Copied!</p></span> </div>
-  </template>
-  
-  <script>
-  import { ref, onMounted, onUnmounted } from 'vue';
-  import CanvasAnimation from '@/components/matrix.vue'; // Update with your actual path
-  
-  export default {
-    components: {
-      CanvasAnimation,
-    },
-    setup() {
-const copied = ref(false); // A ref to manage the state of the copy operation
-
-const copyToClipboard = (text) => {
-  if (navigator.clipboard) {
-    navigator.clipboard.writeText(text).then(() => {
-      copied.value = true;
-
-      setTimeout(() => {
-        copied.value = false;
-      }, 2000); // Reset the copied state after 2 seconds
-    }).catch(err => console.error('Could not copy text: ', err));
-  } else {
-    // Fallback for older browsers
-    const textArea = document.createElement("textarea");
-    textArea.value = text;
-    document.body.appendChild(textArea);
-    textArea.focus();
-    textArea.select();
-
-    try {
-      const successful = document.execCommand('copy');
-      copied.value = successful;
-      
-      setTimeout(() => {
-        copied.value = false;
-      }, 2000); // Reset the copied state after 2 seconds
-    } catch (err) {
-      console.error('Unable to copy', err);
+    function random(n) {
+        return Math.floor(Math.random() * n) + 1;
     }
 
-    document.body.removeChild(textArea);
-  }
-};
-      const finalText = 'ONLY POSSIBLE ON ETHEREUM';
-      const html = ref('');
-      const finished = ref(false);
-  
-      const randomChar = () => {
-        const chars = 'ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
-        return chars[Math.floor(Math.random() * chars.length)];
-      };
-  
-      const type = (index) => {
-        if (index === finalText.length) {
-          finished.value = true;
-          return;
+    function Canvas(elm) {
+        this.elm = elm;
+        this.canvasCtx = this.elm.getContext('2d');
+        this.width = this.elm.width;
+        this.height = this.elm.height;
+        this.children = [];
+
+        this.init();
+    }
+
+    Canvas.prototype = {
+        resize: function(booleam){
+            this.width = this.elm.width = booleam ? this.elm.parentNode.clientWidth * 2 : window.innerWidth * 2;
+            this.height = this.elm.height = booleam ? this.elm.parentNode.clientHeight * 2 : window.innerHeight * 2;
+        },
+        clear: function(){
+            this.canvasCtx.clearRect(0, 0, this.width, this.height);
+        },
+        addChild: function(child){
+            this.children.push(child);
+        },
+        removeChild: function(num){
+            this.children.splice(num, 1);
+        },
+        rendering: function(){
+            this.clear();
+
+            var limit = this.children.length;
+            for(var i = limit - 1; i >= 0; i--){
+                var child = this.children[i];
+                if(child.draw(this.canvasCtx)){
+                    this.removeChild(i);
+                }
+            }
+        },
+        createSakura: function(num, x1, y1, x2, y2){
+            for(var i = 0; i < num; i++){
+                var x_pos = Math.floor(Math.random() * (x2 - x1)) + x1;
+                var y_pos = Math.floor(Math.random() * (y2 - y1)) + y1;
+                this.addChild(new Sakura(
+                    this,
+                    x_pos,
+                    y_pos,
+                    Math.random() + 0.5,
+                    {x: random(360), y: random(360), z: random(360)},
+                    {x: random(10), y: random(10), z: random(10)},
+                    random(5)
+                ));
+            }
+        },
+        animate: function(){
+            var _this = this;
+
+            if(Math.random() > 0.15 && this.children.length < 30){
+                this.createSakura(1, 1, 1, this.width, 0);
+            }
+
+            this.rendering();
+
+            requestAnimFrame(function(){
+                _this.animate();
+            });
+        },
+        init: function(){
+            this.resize(true);
+            this.animate();
         }
-  
-        let text = finalText.substr(0, index);
-        text = text.replace(/./g, '<span style="color: rgba(255,200,0);">$&</span>');
-        for (let i = 0; i < 5; i++) {
-          setTimeout(() => {
-            html.value = text + '<span style="color: rgba(255,200,0);">' + randomChar() + '</span>' + finalText.substr(index + 1).replace(/./g, '<span style="color: transparent;">$&</span>');
-          }, i * 80);
+    };
+
+    function Sakura(parent, x, y, scale, direction, rotate, wind) {
+        this.parent = parent;
+        this.x_pos = x;
+        this.y_pos = y;
+        this.scale = scale;
+        this.direction = direction;
+        this.rotate = rotate;
+        this.wind = wind;
+        this.gr = 5;
+        this.phase = 0;
+    }
+
+    Sakura.prototype = {
+        draw: function(ctx){  
+            ctx.save();
+            ctx.beginPath();
+            ctx.translate(this.x_pos, this.y_pos);
+
+            ctx.rotate(this.direction.y / 100 * Math.PI);
+            ctx.scale(this.scale, this.scale);
+
+            var grad = ctx.createRadialGradient(0, 0, 0, 0, 0, 10);
+                grad.addColorStop(0, '#fbe0ef');
+                grad.addColorStop(0.1, '#f8c1d5');
+                grad.addColorStop(1, '#f3d3e2');
+            ctx.fillStyle = grad;
+
+            var x_rad = Math.cos(this.direction.x * Math.PI / 100);
+            var z_rad = Math.cos(this.direction.z * Math.PI / 100);
+            ctx.moveTo(-6 * z_rad, -10 * x_rad);
+            ctx.bezierCurveTo(-10 * z_rad, 0 * x_rad, -5 * z_rad, 10 * x_rad, 0 * z_rad, 10 * x_rad);
+            ctx.bezierCurveTo(5 * z_rad, 10 * x_rad, 10 * z_rad, 0 * x_rad, 6 * z_rad, -10 * x_rad);
+            ctx.bezierCurveTo(0 * z_rad, -10 * x_rad, 0 * z_rad, -7 * x_rad, 0 * z_rad, -5 * x_rad);
+            ctx.bezierCurveTo(0 * z_rad, -7 * x_rad, 0 * z_rad, -10 * x_rad, -6 * z_rad, -10 * x_rad);
+            ctx.fill();
+            ctx.restore();
+
+            return this.moveSakura();
+        },
+        moveSakura: function(){
+    if(this.phase === 0){
+        var ground = 1 + (this.scale / 10);
+        if(this.y_pos > this.parent.height * ground){
+            this.gr = 0;
+            this.wind = 0;
+            this.rotate.x = 0;
+            this.rotate.y = 0;
+            this.rotate.z = 0;
+            this.phase = 1;
+            this.parent.fallenSakura++;
         }
-  
-        setTimeout(() => {
-          html.value = finalText.substr(0, index + 1).replace(/./g, '<span style="color: rgba(255,200,0);">$&</span>') +
-            finalText.substr(index + 1).replace(/./g, '<span style="color: transparent;">$&</span>');
-          type(index + 1);
-        }, 500);
-      };
-      onMounted(() => {
-  type(0);
-  
-  const ethElement = document.querySelector('.eth');
-  
-  const updateRotation = (event) => {
-    const x = event.clientX;
-    const y = event.clientY;
+    } else if(this.phase === 2){
+        if(this.gr > -3) this.gr += this.gr / 10;
+    }
+
+    this.y_pos += (this.gr * this.scale) / 2;
+    this.x_pos += this.wind / 2;
+    this.direction.x += this.rotate.x / 2;
+    this.direction.y += this.rotate.y / 2;
+    this.direction.z += this.rotate.z / 2;
+
+    if(this.x_pos > this.parent.width) return true;
+    return this.y_pos > this.parent.height ? true : false;
+}
+    };
+
+    // Initialize the canvas
     
-    const centerX = window.innerWidth / 2;
-    const centerY = window.innerHeight / 2;
-    
-    const deltaX = x - centerX;
-    const deltaY = y - centerY;
-    
-    const rotationY = deltaX / centerX * 20; // Adjust the multiplier value to control the rotation intensity
-    const rotationX = -(deltaY / centerY * 20); // Adjust the multiplier value to control the rotation intensity
-    
-    ethElement.style.transform = `rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-  };
-  
-  window.addEventListener('mousemove', updateRotation);
-  
-  onUnmounted(() => {
-    window.removeEventListener('mousemove', updateRotation);
-  });
-});
-  
-      return { html, finalText, finished,  copied, 
-  copyToClipboard };
-    },
-  };
-  </script>
-  
-  <style scoped lang="scss">
-  @import url('https://fonts.googleapis.com/css2?family=Handjet:wght@300&display=swap');
-  
-  * {
-    font-family: 'Handjet', sans-serif;
-  }
-  p{    font-family: 'Handjet', sans-serif;
-color:rgba(255,200,0,1);}
-  a{margin:auto;display:flex;flex-flow:row;p{margin:auto;font-size:32px;}}
-$size: 5rem;
-$rsize: $size * .75;
-$angle: 68deg;
-$r: 50deg;
-$color: #78540092;
-$bg: darken($color, 5);
-
-body {
-  height: 100vh;
-  display: grid;
-  background: $bg;
-  > * {
-    margin: auto;
+    const canvasElm = this.$refs.sakuraCanvas;
+    // eslint-disable-next-line no-unused-vars
+    const sakuraCanvas = new Canvas(canvasElm);
   }
 }
-.swap-cont{position:absolute;right:3rem;top:2rem;}
-.swap{animation:spin 5s ease infinite;display:flex;flex-flow:row;justify-content:center;}
+</script>
 
-h1 {text-align:center;
-  font-weight: 100;
-  color: white;
-}
-
-.ring{overflow:hidden;margin:auto;margin-bottom:2rem;margin-top:2rem;display:flex;flex-flow:column;justify-content:center;width:256px;height:256px;backdrop-filter:blur(5px)brightness(1.5);box-shadow:inset 0px 0px 10px  rgba(255,200,0,1), 0px 0px 10px  rgba(255,200,0,1); border:5px solid rgba(255,200,0,1);border-radius:1000px;}
-
-@keyframes floaty {
-    0%{top:20px;}
-    20%{top:20px;}
-    50%{top:0px;}
-    70%{top:20px;}
-    100%{top:20px;}
-    
-}
-.doge{animation:floaty 5s ease infinite;}
-@keyframes rotate {
-  from {
-    transform: rotateX($r) rotateZ(45deg) translateZ(-.5rem);
-  }
-  50% {
-    transform: rotateX($r) rotateZ(225deg) translateZ(.5rem);
-  }
-  100% {
-    transform: rotateX($r) rotateZ(405deg) translateZ(-.5rem);
-  }
-}
-
-@keyframes spin {
-  0% {
-    transform: rotate(0deg);opacity:0;
-  }
-  10% {
-    transform: rotate(0deg);opacity:0.2;
-  }
-  20% {    
-    transform: rotate(-20deg)scale(1.1);opacity:0.5;
-
-  }
-  90% {    
-    transform: rotate(380deg);opacity:0;
-
-  }
-  100% {
-    transform: rotate(360deg);opacity:0;
-  }
-}
-.front{
-    margin:auto;width:512px;height:512px;position:relative;left:calc(50vw - 50%);top:5vh;max-width:calc(100vw - 2rem);
-}
-.copy{text-align:center;}
-
-.eth {position:relative;
-    margin-top:1rem;margin-left:2rem;
-  transform-style: preserve-3d;
-  width: $rsize; height: $rsize;
-  transform-origin: $rsize / 2 $rsize / 2;
-  transform: rotateX($r) rotateZ(45deg);
-  animation: rotate 4s linear infinite;
-  &:hover {
-   // animation-play-state: paused;
-  }
-}
-
-.pyramid {
-  position: absolute;
-  perspective: 500px;
-  transform-style: preserve-3d;
-  &.inverse {
-    transform: translateZ(-$size / 7) rotateY(180deg);
-  }
-}
-
-.square {
-  width: $rsize;
-  height: $rsize;
-  background: lighten($color, 20);;
-  transform-style: preserve-3d;
-}
-
-.triangle {
-  position: absolute;
-  width: $size;
-  height: $size;
-  transition:all 0.2s ease;
-  &:hover{opacity:0.2;}
-  &:nth-child(1) {
-    width: $rsize;
-    top: -33%;
-    background: lighten($color, 30);
-    clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
-    transform-origin: 50% 100%;
-    transform: rotateX(-$angle);
-  }
-  &:nth-child(2) {
-    width: $rsize;
-    background: lighten($color, 30);
-    clip-path: polygon(50% 100%, 0 0, 100% 0);
-    transform-origin: 50% 0%;
-    transform: rotateX($angle);
-  }
-  &:nth-child(3) {
-    height: $rsize;
-    left: -33%;
-    background: lighten($color, 40);
-    transform-origin: 100% 50%;
-    clip-path: polygon(100% 100%, 0 50%, 100% 0);
-    transform: rotateY($angle);
-  }
-  &:nth-child(4) {
-    height: $rsize;
-    background: lighten($color, 40);
-    transform-origin: 0% 50%;
-    clip-path: polygon(0 100%, 100% 50%, 0 0);
-    transform: rotateY(-$angle);
-  }
-}
-
-// Other pens links
-
-.other-pens {
-  position: absolute;
-  bottom: 1rem;
-  strong {
-    font-family: Helvetica, Arial, sans-serif;
-    font-weight: bold;
-    margin: auto;
-    display: block;
-    text-align: center;
-  }
-  li, a, strong {
-    color: rgba(255,255,255,.8);
-  }
-  ul {
-    list-style: none;
-    padding: 0;
-    margin-left: .8rem;
-  }
-  a {
-    display: block;
-    padding: .4rem;
-  }
-}
-  </style>
-  
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+.link{  position:absolute;z-index:5;text-align:center;bottom:calc(50vh - 280px);height:50px;font-size:2rem;color:#fdadf4; opacity:0.5; font-family: 'Bad Script', cursive;}
+/* Add styles for your video player here */
+</style>
