@@ -22,7 +22,7 @@
       <!-- Add your video source here -->
       <source src="sakuradiner.mp4" type="video/mp4">
       Your browser does not support the video tag.
-    </video></div> <a class="link" href="https://twitter.com/StarryNightDAO"><div >StarryNightDAO</div></a>  <canvas style="width:100vw;height:100vh;position:fixed;" ref="sakuraCanvas"></canvas>
+    </video></div> <a class="link" href="https://T.me/StarryERC20Channel"><div >StarryNightDAO</div></a>  <canvas style="width:100vw;height:100vh;position:fixed;" ref="sakuraCanvas"></canvas>
   </div>
 </template>
 
