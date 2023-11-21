@@ -201,6 +201,6 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
 .link2{bottom:calc(50vh - 320px)!important;}
 .contract{bottom:calc(50vh - 360px)!important;}
-.link{  position:absolute;z-index:5;text-align:center;bottom:calc(50vh - 280px);height:50px;font-size:2rem;color:#01449f; opacity:0.5; font-family: 'Bad Script', cursive;}
+.link{  position:absolute;z-index:5;text-align:center;bottom:calc(50vh - 280px);height:50px;font-size:1rem;color:#01449f; opacity:0.5; font-family: 'Bad Script', cursive;}
 /* Add styles for your video player here */
 </style>
