@@ -22,7 +22,12 @@
       <!-- Add your video source here -->
       <source src="sakuradiner.mp4" type="video/mp4">
       Your browser does not support the video tag.
-    </video></div> <a class="link" href="https://T.me/StarryERC20Channel"><div >StarryNightDAO</div></a>  <canvas style="width:100vw;height:100vh;position:fixed;" ref="sakuraCanvas"></canvas>
+    </video></div> <a class="link" href="https://T.me/StarryERC20Channel"><div >StarryNightDAO</div></a>
+<a class="link link2" href="mailto:StarryNightDAO@protonmail.com"><div>
+StarryNightDAO@protonmail.com</div></a>
+<a class="link contract" href="https://etherscan.io/address/0x8f602ee5b1f8de67120c427717cbe2770f3cf320"><div>
+0x8f602ee5b1f8de67120c427717cbe2770f3cf320</div></a>
+  <canvas style="width:100vw;height:100vh;position:fixed;" ref="sakuraCanvas"></canvas>
   </div>
 </template>
 
@@ -194,6 +199,8 @@ export default {
 
 <style>
 @import url('https://fonts.googleapis.com/css2?family=Bad+Script&display=swap');
+.link2{bottom:calc(50vh - 320px)!important;}
+.contract{bottom:calc(50vh - 360px)!important;}
 .link{  position:absolute;z-index:5;text-align:center;bottom:calc(50vh - 280px);height:50px;font-size:2rem;color:#01449f; opacity:0.5; font-family: 'Bad Script', cursive;}
 /* Add styles for your video player here */
 </style>
