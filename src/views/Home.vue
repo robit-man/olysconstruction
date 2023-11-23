@@ -22,7 +22,7 @@
     
                 <a style="margin:auto;  width:100%;display: flex;
                                           flex-flow: row;
-                                          justify-content: center;" href="https://app.uniswap.org/swap?outputCurrency=0x1b117c931af91a298e8b91977500becc431281e7" target="_blank">
+                                          justify-content: center;" href="https://app.uniswap.org/swap?outputCurrency=0x8f602eE5b1F8DE67120c427717cbe2770F3cF320" target="_blank">
                     <div class="ticker" style="padding:0.5rem;border-radius:1rem;background:lightpink;display:flex;flex-flow:row;width:fit-content;margin:auto;margin-bottom:1rem;">
                         <div class="ticker-black" style="background:black;border-radius:0.5rem;padding-left:1rem;padding-right:1rem;width:auto;height;4rem;">
                             <p style="font-size:1.5rem;padding-top:0.5rem;padding-bottom:0.5rem;font-weight:800;">$STARRY</p>
