@@ -3,14 +3,14 @@
         <div class="header-content" style="margin: auto;height:100%;width:1400px;max-width:calc(100vw - 4rem);border-bottom-right-radius:2rem;backdrop-filter:blur(10px)brightness(0.5);border-bottom-left-radius:2rem;border:3px solid lightpink;border-top:unset;display:flex;flex-flow:row;justify-content:space-between;">
     
             <div class="header-icon" style="height:100%;width:4rem;margin-left:1rem;display:flex;flex-flow:row;justify-content: center;"><img style="height:2rem;margin:1rem;margin-top:0.5rem;" src="starfall.svg" alt=""></div>
-            <p style="margin:auto;opacity:0.5;font-weight:bold;cursor:pointer;" @click="copyTextToClipboard('0x1b117c931af91a298e8b91977500becc431281e7')">0x1b117c931af91a298e8b91977500becc431281e7</p>
+            <p class="contractaddy" style="margin:auto;opacity:0.5;font-weight:bold;cursor:pointer;" @click="copyTextToClipboard('0x1b117c931af91a298e8b91977500becc431281e7')">0x1b117c931af91a298e8b91977500becc431281e7</p>
             <div class="header-menu" style="display:flex;flex-flow:row;gap:1rem;margin-top:auto;margin-bottom:auto;margin-right:2rem;">
                 <a style="line-height:1;" class="link" target="_blank" href="https://twitter.com/StarryNightDAO">
-                                                                                                           <img style="margin:auto;height:1.5rem;" src="logo.svg" alt="">
-                                                                                                        </a>
+                                                                                                                                                   <img style="margin:auto;height:1.5rem;" src="logo.svg" alt="">
+                                                                                                                                                </a>
                 <a class="link" target="_blank" href="https://T.me/StarryERC20Channel">
-                                                                                                            <img style="margin:auto;height:1.5rem;" src="telegram.svg" alt="">
-                                                                                                            </a>
+                                                                                                                                                    <img style="margin:auto;height:1.5rem;" src="telegram.svg" alt="">
+                                                                                                                                                    </a>
     
             </div>
         </div>
@@ -20,15 +20,17 @@
         <div class="hero" style="display:flex;flex-flow:column;height:100vh;width:100vw;">
             <div class="hero-center" style="width:1400px;max-width:calc(100vw - 4rem);text-align:center; ">
     
-                <a style="margin:auto;" href="https://app.uniswap.org/swap?outputCurrency=0x1b117c931af91a298e8b91977500becc431281e7" target="_blank">
+                <a style="margin:auto;  width:100%;display: flex;
+                                          flex-flow: row;
+                                          justify-content: center;" href="https://app.uniswap.org/swap?outputCurrency=0x1b117c931af91a298e8b91977500becc431281e7" target="_blank">
                     <div class="ticker" style="padding:0.5rem;border-radius:1rem;background:lightpink;display:flex;flex-flow:row;width:fit-content;margin:auto;margin-bottom:1rem;">
                         <div class="ticker-black" style="background:black;border-radius:0.5rem;padding-left:1rem;padding-right:1rem;width:auto;height;4rem;">
-                            <p style="font-size:2rem;padding-top:0.5rem;padding-bottom:0.5rem;font-weight:800;">$STARRY</p>
+                            <p style="font-size:1.5rem;padding-top:0.5rem;padding-bottom:0.5rem;font-weight:800;">$STARRY</p>
                         </div>
-                        <h2 style="margin:auto;color:black;font-weight:600;margin-left:2rem;margin-right:0.5rem;font-size:2rem;gap:1rem;display:flex;flex-flow:row;">SWAP <img style="height:3rem;" src="swap.svg" alt=""></h2>
+                        <h2 style="margin:auto;color:black;font-weight:600;margin-left:2rem;margin-right:0.5rem;font-size:1.5rem;gap:1rem;display:flex;flex-flow:row;">SWAP <img style="margin:auto;height:2rem;" src="swap.svg" alt=""></h2>
                     </div>
                 </a>
-                <h1 style="font-size:6vw;font-weight:800;">STARRY NIGHT DAO</h1>
+                <h1 style="font-size:6vw;font-weight:800;margin-bottom:2rem;">STARRY NIGHT DAO</h1>
                 <div class="stars">
                     <img src="star.svg" alt="">
                     <img src="star.svg" alt="">
@@ -54,13 +56,13 @@
             <div class="info-box" style="width:1400px;max-width:calc(100vw - 4rem);margin:auto;display:flex;flex-flow:row;border-radius:2rem;padding:1rem;background:#bfb6ff;">
                 <p style="font-size:1.5rem;opacity:0.9;padding-right:3rem;margin:auto;margin-bottom:0.75rem;margin-left:0.5rem;font-weight:600;color:black;">
                     <b style="font-size:3rem;font-weight:800;text-transform: uppercase;">
-                                                                $STARRY Token</b><br> is a token which will bring liquidity into the NFT market through acquisitions of NFTs for a Treasury based on proposals suggested by $STARRY holders. A
-                    method of distribution will exist to send NFTs to community holders as well. Formulated by ex-LPs from Starry Night Capital the token and project is also focused on innovation in DeFi and memes.
+                                                                                                        $STARRY Token</b><br> is a token which will bring liquidity into the NFT market through acquisitions of NFTs for a Treasury based on proposals
+                    suggested by $STARRY holders. A method of distribution will exist to send NFTs to community holders as well. Formulated by ex-LPs from Starry Night Capital the token and project is also focused on innovation in DeFi and memes.
     
                     <br>
                     <br>
                     <a class="link" target="_blank" href="https://T.me/StarryERC20Channel">
-                                             <b style="color:#bfb6ff;background:black;border-radius:1rem;padding:0.5rem 1rem;font-weight:600;">SAY HI!</b></a></p>
+                                                                                     <b style="color:#bfb6ff;background:black;border-radius:1rem;padding:0.5rem 1rem;font-weight:600;">SAY HI!</b></a></p>
                 <div class="wrapper" style="display:block;height:375px;min-width:500px;overflow:hidden;border-radius:1rem;position:relative;"> <img src="sakuradiner.gif" style="width:175%;margin-left:-21%;" alt="">
                 </div>
             </div>
@@ -549,7 +551,57 @@ canvas {
     left: 0;
 }
 
-@media (max-width: 900px) {}
+@media (max-width: 900px) {
+    .contractaddy {
+        font-size: 1.2rem !important;
+        max-width: 40%;
+        margin-top: 1rem !important;
+        overflow: hidden;
+        &:after {
+            content: '';
+            position: absolute;
+            right: 0px;
+            height: 100%;
+            background: linear-gradient(to right, transparent, black);
+            width: 40px;
+        }
+    }
+    .socialrow {
+        a{padding:0.5rem 1rem!important;}
+    }
+    .hero-center {
+        padding: unset !important;
+        h1 {
+            font-size: 8vw !important;
+            margin-top: 0.5rem;
+        }
+    }
+    .ticker {
+        width: 100%;
+    }
+    .info-box {
+        flex-flow: column !important;
+        .wrapper {
+            min-width: 100% !important;
+            height: 200px !important;
+            margin-top: 1rem;
+        }
+        p {
+            margin: unset !important;
+            text-align: left !important;
+            font-size: 1rem !important;
+            &:nth-child(1) {
+                b {
+                    line-height: 2;
+                    margin-top: -1rem;
+                    &:nth-child(1) {
+                        font-size: 1.5rem !important;
+                    }
+                }
+            }
+        }
+    }
+}
 
 /* Add styles for your video player here */
 </style>
