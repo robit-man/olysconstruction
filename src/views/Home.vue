@@ -3,7 +3,7 @@
         <div class="header-content" style="margin: auto;height:100%;width:1400px;max-width:calc(100vw - 4rem);border-bottom-right-radius:2rem;backdrop-filter:blur(10px)brightness(0.5);border-bottom-left-radius:2rem;border:3px solid lightpink;border-top:unset;display:flex;flex-flow:row;justify-content:space-between;">
     
             <div class="header-icon" style="height:100%;width:4rem;margin-left:1rem;display:flex;flex-flow:row;justify-content: center;"><img style="height:2rem;margin:1rem;margin-top:0.5rem;" src="starfall.svg" alt=""></div>
-            <p class="contractaddy" style="margin:auto;opacity:0.5;font-weight:bold;cursor:pointer;" @click="copyTextToClipboard('0x1b117c931af91a298e8b91977500becc431281e7')">0x1b117c931af91a298e8b91977500becc431281e7</p>
+            <p class="contractaddy" style="margin:auto;opacity:0.5;font-weight:bold;cursor:pointer;" @click="copyTextToClipboard('0x8f602eE5b1F8DE67120c427717cbe2770F3cF320')">0x8f602eE5b1F8DE67120c427717cbe2770F3cF320</p>
             <div class="header-menu" style="display:flex;flex-flow:row;gap:1rem;margin-top:auto;margin-bottom:auto;margin-right:2rem;">
                 <a style="line-height:1;" class="link" target="_blank" href="https://twitter.com/StarryNightDAO">
                                                                                                                                                    <img style="margin:auto;height:1.5rem;" src="logo.svg" alt="">
@@ -40,7 +40,7 @@
                     <img src="star.svg" alt="">
                 </div>
                 <div class="socialrow">
-                    <a target="_blank" class="link" style="backdrop-filter:blur(10px)brightness(2);" href="https://dexscreener.com/ethereum/0x1b117c931af91a298e8b91977500becc431281e7">
+                    <a target="_blank" class="link" style="backdrop-filter:blur(10px)brightness(2);" href="https://dexscreener.com/ethereum/0x8f602eE5b1F8DE67120c427717cbe2770F3cF320">
                         <div>DEXSCREENER</div>
                     </a>
     
@@ -101,8 +101,8 @@ export default {
             mouseY: 0,
             centerX: window.innerWidth / 2,
             centerY: window.innerHeight / 2,
-            text: '0x1b117c931af91a298e8b91977500becc431281e7',
-            textToCopy: '0x1b117c931af91a298e8b91977500becc431281e7',
+            text: '0x8f602eE5b1F8DE67120c427717cbe2770F3cF320',
+            textToCopy: '0x8f602eE5b1F8DE67120c427717cbe2770F3cF320',
         };
     },
     mounted() {
