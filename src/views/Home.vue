@@ -3,13 +3,14 @@
         <div class="header-content" style="margin: auto;height:100%;width:1400px;max-width:calc(100vw - 4rem);border-bottom-right-radius:2rem;backdrop-filter:blur(10px)brightness(0.5);border-bottom-left-radius:2rem;border:3px solid lightpink;border-top:unset;display:flex;flex-flow:row;justify-content:space-between;">
     
             <div class="header-icon" style="height:100%;width:4rem;margin-left:1rem;display:flex;flex-flow:row;justify-content: center;"><img style="height:2rem;margin:1rem;margin-top:0.5rem;" src="starfall.svg" alt=""></div>
+            <p style="margin:auto;opacity:0.5;font-weight:bold;cursor:pointer;" @click="copyTextToClipboard('0x1b117c931af91a298e8b91977500becc431281e7')">0x1b117c931af91a298e8b91977500becc431281e7</p>
             <div class="header-menu" style="display:flex;flex-flow:row;gap:1rem;margin-top:auto;margin-bottom:auto;margin-right:2rem;">
                 <a style="line-height:1;" class="link" target="_blank" href="https://twitter.com/StarryNightDAO">
-                                                       <img style="margin:auto;height:1.5rem;" src="logo.svg" alt="">
-                                                    </a>
+                                                                                                           <img style="margin:auto;height:1.5rem;" src="logo.svg" alt="">
+                                                                                                        </a>
                 <a class="link" target="_blank" href="https://T.me/StarryERC20Channel">
-                                                        <img style="margin:auto;height:1.5rem;" src="telegram.svg" alt="">
-                                                        </a>
+                                                                                                            <img style="margin:auto;height:1.5rem;" src="telegram.svg" alt="">
+                                                                                                            </a>
     
             </div>
         </div>
@@ -37,11 +38,11 @@
                     <img src="star.svg" alt="">
                 </div>
                 <div class="socialrow">
-                    <a target="_blank" class="link" href="https://dexscreener.com/ethereum/0x1b117c931af91a298e8b91977500becc431281e7">
+                    <a target="_blank" class="link" style="backdrop-filter:blur(10px)brightness(2);" href="https://dexscreener.com/ethereum/0x1b117c931af91a298e8b91977500becc431281e7">
                         <div>DEXSCREENER</div>
                     </a>
     
-                    <a target="_blank" class="link contract" href="https://etherscan.io/address/0x8f602ee5b1f8de67120c427717cbe2770f3cf320">
+                    <a target="_blank" class="link contract" style="backdrop-filter:blur(10px)brightness(2);" href="https://etherscan.io/address/0x8f602ee5b1f8de67120c427717cbe2770f3cf320">
                         <div>
                             ETHERSCAN</div>
                     </a>
@@ -50,16 +51,37 @@
         </div>
     
         <div class="info" style="height:100vh;width:100vw;display:flex;flex-flow:column;justify-content:center;">
-            <div class="info-box" style="width:1400px;max-width:calc(100vw - 4rem);margin:auto;display:flex;flex-flow:row;border-radius:2rem;padding:1rem;background:lightpink;">
-                <p style="font-size:1.6rem;padding-right:3rem;margin:auto;margin-left:2rem;font-weight:600;color:black;">$STARRY Token is a token which will bring liquidity into the NFT market through acquisitions of NFTs for a Treasury based on proposals suggested by $STARRY holders. A method of distribution will exist to send NFTs to community holders as well.
-                    Formulated by ex-LPs from Starry Night Capital the token and project is also focused on innovation in DeFi and memes.</p>
-                <div class="wrapper" style="display:block;height:300px;min-width:500px;overflow:hidden;border-radius:1rem;position:relative;"> <img src="sakuradiner.gif" style="width:175%;margin-left:-21%;" alt="">
+            <div class="info-box" style="width:1400px;max-width:calc(100vw - 4rem);margin:auto;display:flex;flex-flow:row;border-radius:2rem;padding:1rem;background:#bfb6ff;">
+                <p style="font-size:1.5rem;opacity:0.9;padding-right:3rem;margin:auto;margin-bottom:0.75rem;margin-left:0.5rem;font-weight:600;color:black;">
+                    <b style="font-size:3rem;font-weight:800;text-transform: uppercase;">
+                                                                $STARRY Token</b><br> is a token which will bring liquidity into the NFT market through acquisitions of NFTs for a Treasury based on proposals suggested by $STARRY holders. A
+                    method of distribution will exist to send NFTs to community holders as well. Formulated by ex-LPs from Starry Night Capital the token and project is also focused on innovation in DeFi and memes.
+    
+                    <br>
+                    <br>
+                    <a class="link" target="_blank" href="https://T.me/StarryERC20Channel">
+                                             <b style="color:#bfb6ff;background:black;border-radius:1rem;padding:0.5rem 1rem;font-weight:600;">SAY HI!</b></a></p>
+                <div class="wrapper" style="display:block;height:375px;min-width:500px;overflow:hidden;border-radius:1rem;position:relative;"> <img src="sakuradiner.gif" style="width:175%;margin-left:-21%;" alt="">
                 </div>
             </div>
         </div>
     
-        <div class="footer" style="height:100vh;width:100vw;">
+        <div class="footer" style="height:100vh;width:100vw;display:flex;flex-flow:column;justify-content:center;">
+            <div class="info-box" style="backdrop-filter:blur(10px)brightness(2);color:cornflowerblue!important;gap:1rem;text-align:center;width:1400px;max-width:calc(100vw - 4rem);margin:auto;display:flex;flex-flow:row;border-radius:2rem;padding:1rem 2rem; border:3px solid cornflowerblue;">
     
+                <h1 style="font-weight:800;text-align:left;font-size:2rem;color:cornflowerblue!important;">$STARRY Token Distribution</h1>
+                <p style="margin:auto;color:cornflowerblue!important;">15% Private</p>
+                <p style="margin:auto;color:cornflowerblue!important;">5% Marketing</p>
+                <p style="margin:auto;color:cornflowerblue!important;">5% Strategic</p>
+                <p style="margin:auto;color:cornflowerblue!important;">5% Initial LP</p>
+                <p style="margin:auto;color:cornflowerblue!important;">7.5% Reserve LP</p>
+                <p style="margin:auto;color:cornflowerblue!important;">7.5% CEX/MM</p>
+                <p style="margin:auto;color:cornflowerblue!important;">25% Ex-LP</p>
+                <p style="margin:auto;color:cornflowerblue!important;">25% Ex-LP</p>
+                <p style="margin:auto;color:cornflowerblue!important;">14% Development & Operations</p>
+                <p style="margin:auto;color:cornflowerblue!important;">14% NFTs</p>
+    
+            </div>
         </div>
     
     
@@ -77,9 +99,12 @@ export default {
             mouseY: 0,
             centerX: window.innerWidth / 2,
             centerY: window.innerHeight / 2,
+            text: '0x1b117c931af91a298e8b91977500becc431281e7',
+            textToCopy: '0x1b117c931af91a298e8b91977500becc431281e7',
         };
     },
     mounted() {
+
         (function() {
             var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
                 window.setTimeout(callback, 1000 / 60);
@@ -409,37 +434,20 @@ export default {
     },
     methods: {
         // Your existing methods...
-
+        async copyTextToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                console.log('Text copied to clipboard');
+            } catch (err) {
+                console.error('Failed to copy text: ', err);
+            }
+        },
         handleMouseMove(event) {
             this.mouseX = event.clientX;
             this.mouseY = event.clientY;
             this.applyRotation();
         },
-        applyRotation() {
-            const dx = (this.mouseX - this.centerX) / this.centerX;
-            const dy = (this.mouseY - this.centerY) / this.centerY;
-            const rotationX = dy * 20; // Max rotation around X-axis
-            const rotationY = dx * 20; // Max rotation around Y-axis
 
-            // Apply the rotation to the first video-wrapper
-            const videoWrapperChild = this.$el.querySelector('.video-wrapper-child');
-            if (videoWrapperChild) {
-                videoWrapperChild.style.transform = `scale(1.5)  translatey(${rotationX / 4}%)  translatex(${rotationY / 4}%) rotateX(${rotationX / 4}deg) rotateY(${rotationY / 4}deg)`;
-            }
-            const videoWrapper = this.$el.querySelector('.video-wrapper');
-            if (videoWrapper) {
-                videoWrapper.style.transform = `scale(1) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-            }
-            // Apply the rotation to the first video-wrapper
-            const videoWrapperChild2 = this.$el.querySelector('.video-wrapper-child2');
-            if (videoWrapperChild2) {
-                videoWrapperChild2.style.transform = `scale(1.5) translatey(-5%) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-            }
-            const videoWrapper2 = this.$el.querySelector('.video-wrapper2');
-            if (videoWrapper2) {
-                videoWrapper2.style.transform = `scale(1) rotateX(${rotationX}deg) rotateY(${rotationY}deg)`;
-            }
-        }
     },
     beforeUnmount() {
         // Remove event listener when component is destroyed
