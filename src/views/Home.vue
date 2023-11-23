@@ -61,8 +61,8 @@
     
                     <br>
                     <br>
-                    <a class="link" target="_blank" href="https://T.me/StarryERC20Channel">
-                                                                                     <b style="color:#bfb6ff;background:black;border-radius:1rem;padding:0.5rem 1rem;font-weight:600;">SAY HI!</b></a></p>
+                    <a class="link" target="_blank" href="mailto:StarryNightDAO@protonmail.com">
+                                                                                     <b style="color:#bfb6ff;background:black;border-radius:1rem;padding:0.5rem 1rem;font-weight:600;">EMAIL US</b></a></p>
                 <div class="wrapper" style="display:block;height:375px;min-width:500px;overflow:hidden;border-radius:1rem;position:relative;"> <img src="sakuradiner.gif" style="width:175%;margin-left:-21%;" alt="">
                 </div>
             </div>
