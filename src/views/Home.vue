@@ -79,7 +79,7 @@
                 <p style="margin:auto;color:cornflowerblue!important;">7.5% Reserve LP</p>
                 <p style="margin:auto;color:cornflowerblue!important;">7.5% CEX/MM</p>
                 <p style="margin:auto;color:cornflowerblue!important;">25% Ex-LP</p>
-                <p style="margin:auto;color:cornflowerblue!important;">25% Ex-LP</p>
+                <p style="margin:auto;color:cornflowerblue!important;">2% FT</p>
                 <p style="margin:auto;color:cornflowerblue!important;">14% Development & Operations</p>
                 <p style="margin:auto;color:cornflowerblue!important;">14% NFTs</p>
     
