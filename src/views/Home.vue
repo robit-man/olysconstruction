@@ -1,35 +1,71 @@
 <template>
-    <div style="display:flex;flex-flow:wrap;perspective:1500px;justify-content:center;height:100vh;width:100vw;">
-        <div class="video-wrapper" style="perspective:10000px;border:2px solid #001a3e;user-select:none;pointer-events:none;margin:auto 1rem ;overflow:hidden;height:400px;border-radius:10px;z-index:2;">
-            <img class="video-wrapper-child" style="transform-origin:30% 50%;  opacity: 0.5;" src="sakuradiner.gif" alt="">
-            <div class="roadmap" style="color:white;font-size:2rem;top:15%;position:absolute;width:100%;text-align:center;">
-                <p>ROADMAP COMING SOON</p>
-            </div>
-            <div class="text-box" style="  ">
-                <p style="text-shadow:1px 2px 0px pink;">STARRY NIGHT DAO</p>
-                <p style="font-size:0.75rem;opacity:0.25;">STARRY CONTRACT</p>
-                <p style="text-align:center;color:pink;font-size:0.75rem;opacity:0.5;text-shadow:1px 2px 0px #001a3e;">0x8f602ee5b1f8de67120c427717cbe2770f3cf320</p>
+    <div class="header" style="z-index:10;position:fixed;top:0px;left:0px;width:100vw;display:flex;flex-flow:row;justify-content:center;height:4rem;">
+        <div class="header-content" style="margin: auto;height:100%;width:1400px;max-width:calc(100vw - 4rem);border-bottom-right-radius:2rem;backdrop-filter:blur(10px)brightness(0.5);border-bottom-left-radius:2rem;border:3px solid lightpink;border-top:unset;display:flex;flex-flow:row;justify-content:space-between;">
+    
+            <div class="header-icon" style="height:100%;width:4rem;margin-left:1rem;display:flex;flex-flow:row;justify-content: center;"><img style="height:2rem;margin:1rem;margin-top:0.5rem;" src="starfall.svg" alt=""></div>
+            <div class="header-menu" style="display:flex;flex-flow:row;gap:1rem;margin-top:auto;margin-bottom:auto;margin-right:2rem;">
+                <a style="line-height:1;" class="link" target="_blank" href="https://twitter.com/StarryNightDAO">
+                                                       <img style="margin:auto;height:1.5rem;" src="logo.svg" alt="">
+                                                    </a>
+                <a class="link" target="_blank" href="https://T.me/StarryERC20Channel">
+                                                        <img style="margin:auto;height:1.5rem;" src="telegram.svg" alt="">
+                                                        </a>
+    
             </div>
         </div>
-        <div class="video-wrapper2" style="perspective:1000px;position:absolute;  top: calc(50vh - 200px); margin-left:-640px;filter:blur(50px)brightness(1.5);user-select:none;pointer-events:none;margin:auto;overflow:hidden;height:400px;border-radius:10px;">
-            <img class="video-wrapper-child2" src="sakuradiner.gif" alt="">
+    </div>
+    <div class="page-scroller" style="z-index:5;display:block;  overflow-x: hidden;height:100vh;width:100vw;position:fixed;overflow-y:auto;">
+    
+        <div class="hero" style="display:flex;flex-flow:column;height:100vh;width:100vw;">
+            <div class="hero-center" style="width:1400px;max-width:calc(100vw - 4rem);text-align:center; ">
+    
+                <a style="margin:auto;" href="https://app.uniswap.org/swap?outputCurrency=0x1b117c931af91a298e8b91977500becc431281e7" target="_blank">
+                    <div class="ticker" style="padding:0.5rem;border-radius:1rem;background:lightpink;display:flex;flex-flow:row;width:fit-content;margin:auto;margin-bottom:1rem;">
+                        <div class="ticker-black" style="background:black;border-radius:0.5rem;padding-left:1rem;padding-right:1rem;width:auto;height;4rem;">
+                            <p style="font-size:2rem;padding-top:0.5rem;padding-bottom:0.5rem;font-weight:800;">$STARRY</p>
+                        </div>
+                        <h2 style="margin:auto;color:black;font-weight:600;margin-left:2rem;margin-right:0.5rem;font-size:2rem;gap:1rem;display:flex;flex-flow:row;">SWAP <img style="height:3rem;" src="swap.svg" alt=""></h2>
+                    </div>
+                </a>
+                <h1 style="font-size:6vw;font-weight:800;">STARRY NIGHT DAO</h1>
+                <div class="stars">
+                    <img src="star.svg" alt="">
+                    <img src="star.svg" alt="">
+                    <img src="star.svg" alt="">
+                    <img src="star.svg" alt="">
+                    <img src="star.svg" alt="">
+                    <img src="star.svg" alt="">
+                </div>
+                <div class="socialrow">
+                    <a target="_blank" class="link" href="https://dexscreener.com/ethereum/0x1b117c931af91a298e8b91977500becc431281e7">
+                        <div>DEXSCREENER</div>
+                    </a>
+    
+                    <a target="_blank" class="link contract" href="https://etherscan.io/address/0x8f602ee5b1f8de67120c427717cbe2770f3cf320">
+                        <div>
+                            ETHERSCAN</div>
+                    </a>
+                </div>
+            </div>
         </div>
     
-        <div class="row">
-            <a class="link" href="https://T.me/StarryERC20Channel">
-                <div>TELEGRAM</div>
-            </a>
-            <a class="link link2" href="mailto:StarryNightDAO@protonmail.com">
-                <div>
-                    EMAIL</div>
-            </a>
-            <a class="link contract" href="https://etherscan.io/address/0x8f602ee5b1f8de67120c427717cbe2770f3cf320">
-                <div>
-                    ETHERSCAN</div>
-            </a>
+        <div class="info" style="height:100vh;width:100vw;display:flex;flex-flow:column;justify-content:center;">
+            <div class="info-box" style="width:1400px;max-width:calc(100vw - 4rem);margin:auto;display:flex;flex-flow:row;border-radius:2rem;padding:1rem;background:lightpink;">
+                <p style="font-size:1.6rem;padding-right:3rem;margin:auto;margin-left:2rem;font-weight:600;color:black;">$STARRY Token is a token which will bring liquidity into the NFT market through acquisitions of NFTs for a Treasury based on proposals suggested by $STARRY holders. A method of distribution will exist to send NFTs to community holders as well.
+                    Formulated by ex-LPs from Starry Night Capital the token and project is also focused on innovation in DeFi and memes.</p>
+                <div class="wrapper" style="display:block;height:300px;min-width:500px;overflow:hidden;border-radius:1rem;position:relative;"> <img src="sakuradiner.gif" style="width:175%;margin-left:-21%;" alt="">
+                </div>
+            </div>
         </div>
-        <canvas style="width:100vw;height:100vh;position:fixed;" ref="sakuraCanvas"></canvas>
+    
+        <div class="footer" style="height:100vh;width:100vw;">
+    
+        </div>
+    
+    
+    
     </div>
+    <canvas style="width:100vw;height:100vh;position:absolute!important;" ref="sakuraCanvas"></canvas>
 </template>
 
 <script>
@@ -44,7 +80,178 @@ export default {
         };
     },
     mounted() {
+        (function() {
+            var requestAnimationFrame = window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame || function(callback) {
+                window.setTimeout(callback, 1000 / 60);
+            };
+            window.requestAnimationFrame = requestAnimationFrame;
+        })();
 
+        // Terrain stuff.
+        var background = document.getElementById("bgCanvas"),
+            bgCtx = background.getContext("2d"),
+            width = window.innerWidth,
+            height = document.body.offsetHeight;
+
+        (height < 400) ? height = 400: height;
+
+        background.width = width;
+        background.height = height;
+
+        function Terrain(options) {
+            options = options || {};
+            this.terrain = document.createElement("canvas");
+            this.terCtx = this.terrain.getContext("2d");
+            this.scrollDelay = options.scrollDelay || 90;
+            this.lastScroll = new Date().getTime();
+
+            this.terrain.width = width;
+            this.terrain.height = height;
+            this.fillStyle = options.fillStyle || "#191D4C";
+            this.mHeight = options.mHeight || height;
+
+            // generate
+            this.points = [];
+
+            var displacement = options.displacement || 140,
+                power = Math.pow(2, Math.ceil(Math.log(width) / (Math.log(2))));
+
+            // set the start height and end height for the terrain
+            this.points[0] = this.mHeight; //(this.mHeight - (Math.random() * this.mHeight / 2)) - displacement;
+            this.points[power] = this.points[0];
+
+            // create the rest of the points
+            for (var i = 1; i < power; i *= 2) {
+                for (var j = (power / i) / 2; j < power; j += power / i) {
+                    this.points[j] = ((this.points[j - (power / i) / 2] + this.points[j + (power / i) / 2]) / 2) + Math.floor(Math.random() * -displacement + displacement);
+                }
+                displacement *= 0.6;
+            }
+
+            document.body.appendChild(this.terrain);
+        }
+
+        Terrain.prototype.update = function() {
+            // draw the terrain
+            this.terCtx.clearRect(0, 0, width, height);
+            this.terCtx.fillStyle = this.fillStyle;
+
+            if (new Date().getTime() > this.lastScroll + this.scrollDelay) {
+                this.lastScroll = new Date().getTime();
+                this.points.push(this.points.shift());
+            }
+
+            this.terCtx.beginPath();
+            for (var i = 0; i <= width; i++) {
+                if (i === 0) {
+                    this.terCtx.moveTo(0, this.points[0]);
+                } else if (this.points[i] !== undefined) {
+                    this.terCtx.lineTo(i, this.points[i]);
+                }
+            }
+
+            this.terCtx.lineTo(width, this.terrain.height);
+            this.terCtx.lineTo(0, this.terrain.height);
+            this.terCtx.lineTo(0, this.points[0]);
+            this.terCtx.fill();
+        }
+
+
+        // Second canvas used for the stars
+        bgCtx.fillStyle = '#05004c';
+        bgCtx.fillRect(0, 0, width, height);
+
+        // stars
+        function Star(options) {
+            this.size = Math.random() * 2;
+            this.speed = Math.random() * .05;
+            this.x = options.x;
+            this.y = options.y;
+        }
+
+        Star.prototype.reset = function() {
+            this.size = Math.random() * 2;
+            this.speed = Math.random() * .05;
+            this.x = width;
+            this.y = Math.random() * height;
+        }
+
+        Star.prototype.update = function() {
+            this.x -= this.speed;
+            if (this.x < 0) {
+                this.reset();
+            } else {
+                bgCtx.fillRect(this.x, this.y, this.size, this.size);
+            }
+        }
+
+        function ShootingStar() {
+            this.reset();
+        }
+
+        ShootingStar.prototype.reset = function() {
+            this.x = Math.random() * width;
+            this.y = 0;
+            this.len = (Math.random() * 80) + 10;
+            this.speed = (Math.random() * 10) + 6;
+            this.size = (Math.random() * 1) + 0.1;
+            // this is used so the shooting stars arent constant
+            this.waitTime = new Date().getTime() + (Math.random() * 3000) + 500;
+            this.active = false;
+        }
+
+        ShootingStar.prototype.update = function() {
+            if (this.active) {
+                this.x -= this.speed;
+                this.y += this.speed;
+                if (this.x < 0 || this.y >= height) {
+                    this.reset();
+                } else {
+                    bgCtx.lineWidth = this.size;
+                    bgCtx.beginPath();
+                    bgCtx.moveTo(this.x, this.y);
+                    bgCtx.lineTo(this.x + this.len, this.y - this.len);
+                    bgCtx.stroke();
+                }
+            } else {
+                if (this.waitTime < new Date().getTime()) {
+                    this.active = true;
+                }
+            }
+        }
+
+        var entities = [];
+
+        // init the stars
+        for (var i = 0; i < height; i++) {
+            entities.push(new Star({
+                x: Math.random() * width,
+                y: Math.random() * height
+            }));
+        }
+
+        // Add 2 shooting stars that just cycle.
+        entities.push(new ShootingStar());
+        entities.push(new ShootingStar());
+        entities.push(new Terrain({ mHeight: (height / 2) + 100 }));
+        entities.push(new Terrain({ displacement: 120, scrollDelay: 50, fillStyle: "rgb(17,20,40)", mHeight: (height / 2) + 150 }));
+        entities.push(new Terrain({ displacement: 100, scrollDelay: 20, fillStyle: "rgb(10,10,5)", mHeight: height / 2 + 200 }));
+
+        //animate background
+        function animate() {
+            bgCtx.fillStyle = '#110E19';
+            bgCtx.fillRect(0, 0, width, height);
+            bgCtx.fillStyle = '#ffffff';
+            bgCtx.strokeStyle = '#ffffff';
+
+            var entLen = entities.length;
+
+            while (entLen--) {
+                entities[entLen].update();
+            }
+            requestAnimationFrame(animate);
+        }
+        animate();
         const requestAnimFrame = (function() {
             return window.requestAnimationFrame ||
                 window.webkitRequestAnimationFrame ||
@@ -243,136 +450,98 @@ export default {
 
 <style lang="scss">
 @import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@300;400;500;600;700&display=swap');
-.link2 {}
+p,
+h1,
+h2,
+h3,
+h4,
+a {
+    font-family: 'Quicksand', sans-serif;
+    color: lightpink;
+}
 
-.contract {}
-
-.row {
-    position: absolute;
-    z-index: 5;
-    text-align: center;
-    bottom: calc(50vh - 280px);
-    display: flex;
-    flex-flow: row;
+.hero-center {
     margin: auto;
-    gap: 1rem;
-    a {
-        transition: all 0.5s ease;
-        padding: 0.5rem 1rem;
-        display: flex;
-        flex-flow: column;
-        text-align: center;
-        border-radius: 8px;
-        backdrop-filter: blur(10px)brightness(1.5);
-        background: rgba(255, 192, 203, 0.8);
-        box-shadow: 0px 2px 50px #00000066;
-        border: 2px solid #001a3e;
-        &:hover {
-            background: #001a3e;
-            color: white !important;
-            border: 2px solid #001a3e;
-        }
-    }
-}
-
-p {
-    opacity: 0.9;
-    font-family: 'Quicksand', sans-serif;
-}
-
-.text-box {
-    position: absolute;
-    top: calc( 50% - 4rem);
-    padding: 2rem;
+    padding: 0rem 3rem;
     border-radius: 2rem;
-    backdrop-filter: blur(10px);
-    text-align: center;
-    width: 70%;
-    left: 15%;
-    border: 2px solid #001a3e;
-    font-size: 3rem !important;
-    p {
-        color: #001a3e;
-        font-weight: 800;
-        font-size: 3rem;
-    }
-}
-
-.link {
-    height: auto;
-    font-size: 1.2rem;
-    color: #001a3e;
-    font-family: 'Quicksand', sans-serif;
-    font-weight: 800;
+    margin: auto;
 }
 
 body {
-    background: rgb(62, 46, 94);
-    &:after {
-        content: '';
-        background-image: url(/parallax3.png);
-        width: 100vw;
-        height: 100vh;
-        left: 0px;
-        position: absolute;
-        background-repeat: no-repeat;
-        background-position: bottom;
-        filter: hue-rotate(180deg);
-        background-size: contain;
-        opacity: 0.25;
-        z-index:-1;
-    }
+    background-color: #000;
+    color: #fff;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
 }
-@media (max-width: 900px) {
 
-
-    .row {
-    position: absolute;
-    z-index: 5;
-    text-align: center;
-    bottom: calc(50vh - 280px);
+.socialrow {
     display: flex;
     flex-flow: row;
-    margin: auto;
-    gap: 0.5rem;
+    gap: 1rem;
+    justify-content: center;
     a {
-        transition: all 0.5s ease;
-        padding: 0.5rem 1rem;
-        display: flex;
-        flex-flow: column;
-        text-align: center;
-        border-radius: 8px;
-        backdrop-filter: blur(10px)brightness(1.5);
-        background: rgba(255, 192, 203, 0.8);
-        box-shadow: 0px 2px 50px #00000066;
-        border: 2px solid #001a3e;
+        border: 1px solid lightpink;
+        border-radius: 2rem;
+        padding: 1rem 2rem;
         &:hover {
-            background: #001a3e;
-            color: white !important;
-            border: 2px solid #001a3e;
+            color: black;
+            background: lightpink;
         }
     }
 }
-    .text-box {
+
+#app {
+    z-index: 10;
+    overflow-x: hidden;
+}
+
+.stars {
     position: absolute;
-    top: calc( 50% - 4rem);
-    padding: 2rem;
-    border-radius: 2rem;
-    backdrop-filter: blur(10px);
-    text-align: center;
-    width: 70%;
-    left: 15%;
-    border: 2px solid #001a3e;
-    font-size: 2rem !important;
-    p {
-        color: #001a3e;
-        font-weight: 800;
-        font-size: 2rem;
-        &:nth-child(3){line-height:1;font-size:0.5rem!important;}
-        &:nth-child(2){line-height:2;font-size:0.5rem!important;}
+    width: 100%;
+    img {
+        &:nth-child(1) {
+            height: 1.4rem;
+            top: -3rem;
+            left: -10rem;
+        }
+        &:nth-child(2) {
+            height: 1.9rem;
+            top: -11rem;
+            right: -5rem;
+        }
+        &:nth-child(3) {
+            height: 1rem;
+            left: -8rem;
+            top: -12rem;
+        }
+        &:nth-child(4) {
+            height: 2rem;
+            right: -8rem;
+            top: -12rem;
+        }
+        &:nth-child(5) {
+            height: 2.2rem;
+            right: -15rem;
+            top: -2rem;
+        }
+        &:nth-child(6) {
+            height: 1.6rem;
+            left: -25rem;
+            top: -1rem;
+        }
     }
 }
 
+canvas {
+    position: absolute;
+    top: 0;
+    left: 0;
 }
+
+@media (max-width: 900px) {}
+
 /* Add styles for your video player here */
 </style>
