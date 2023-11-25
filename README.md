@@ -1,4 +1,4 @@
-$OPOE
+OTC
 
 ## Project setup
 ```
