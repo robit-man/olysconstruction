@@ -221,6 +221,7 @@ input {
     font-size: 1rem;
     height: 2rem;
     width: 100%;
+border-radius:0px!important;
     font-family: 'Raleway', sans-serif;
 }
 
