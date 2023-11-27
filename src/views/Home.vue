@@ -63,7 +63,7 @@
                         <div class="inputs" style="border-top:1px solid #0001;">
                             <div class="input-module" style="margin-top:1rem;">
                                 <div class="input-label" style="margin-bottom:0.25rem;">
-                                    OFFER ASSET
+                                    REQUEST ASSET
                                 </div>
                                 <div class="input-wrapper" style="display:flex;flex-flow:row;justify-content: center;">
                                     <input type="text">
@@ -202,7 +202,7 @@ p {
         background: #0005;
         border-style: solid;
         border-color: #0005;
-        color: #fff5s;
+        color: #fff5;
     }
 }
 
