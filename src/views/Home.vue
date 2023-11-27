@@ -210,8 +210,7 @@ p {
     display: flex;
     flex-flow: row;
     justify-content: center;
-    border: 1px solid #0005;
-    //box-shadow: 0px 0px 100px #0002;
+    border: 1px solid #0005; //box-shadow: 0px 0px 100px #0002;
 }
 
 input {
@@ -246,6 +245,7 @@ button:focus {
     margin: 1rem;
     padding: unset;
     overflow-y: auto;
+    max-width: 100%;
     color: #000000aa;
 }
 
