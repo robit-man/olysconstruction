@@ -9,7 +9,7 @@
     
             <div class="module" style="height:min-content;margin:auto;padding:1rem;">
     
-                <h1 style="color:#000000aa; font-weight:100;margin:unset;line-height:1;text-align:center;font-size:12rem;">OTC</h1>
+                <h1 style="color:#000000aa; font-weight:100;margin:1rem auto;line-height:1;text-align:center;font-size:8rem;">OTC</h1>
     
                 <div style="text-align:center;font-weight:100;">
                     <p style="font-weight:300;">A Trustless Escrow Solution on Ethereum</p>
