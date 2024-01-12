@@ -1,4 +1,4 @@
-OTC
+🥩
 
 ## Project setup
 ```
