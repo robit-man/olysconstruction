@@ -67,8 +67,8 @@ export default {
             docs: false,
             centerX: window.innerWidth / 2,
             centerY: window.innerHeight / 2,
-            text: '0x36B17ff04654ba7031b1a3D8eAd3016A15262287',
-            textToCopy: '0x36B17ff04654ba7031b1a3D8eAd3016A15262287 ',
+            text: '0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d',
+            textToCopy: '0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d ',
         };
     },
     mounted() {
