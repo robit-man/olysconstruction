@@ -8,7 +8,7 @@
         <div class="social">
             <a href="T.me/JOINSAMTG"><img src="/TG.svg" alt=""></a>
             <a href="Twitter.com/ethereum_sam"><img src="/XT.svg" alt=""></a>
-            <a href="">
+            <a href="https://etherscan.io/address/0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d">
                 <p>Etherscan</p>
             </a>
         </div>
@@ -25,9 +25,9 @@
                     <p>Total supply: <b>100,000,000</b></p>
                     <p>Tax on Buy-Sell: <b>5/5</b></p>
                 </div>
-                <div class="contract-info" @click="copyToClipboard('0x912ce59144191c1204e64559fe8253a0e49e6548')">
+                <div class="contract-info" @click="copyToClipboard('0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d')">
                     <p>Contract address: </p>
-                    <p><b>0x912ce59144191c1204e64559fe8253a0e49e6548</b> <img src="/copy.svg" alt=""></p>
+                    <p><b>0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d</b> <img src="/copy.svg" alt=""></p>
                 </div>
             </div>
             <div class="row">
@@ -59,8 +59,8 @@ export default {
             docs: false,
             centerX: window.innerWidth / 2,
             centerY: window.innerHeight / 2,
-            text: '0x912ce59144191c1204e64559fe8253a0e49e6548',
-            textToCopy: '0x912ce59144191c1204e64559fe8253a0e49e6548 ',
+            text: '0x36B17ff04654ba7031b1a3D8eAd3016A15262287',
+            textToCopy: '0x36B17ff04654ba7031b1a3D8eAd3016A15262287 ',
         };
     },
     mounted() {
