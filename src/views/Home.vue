@@ -1,19 +1,50 @@
 <template>
-    <div class="bg">
-        <div class="name">
-            <h2>SteakFI</h2>
+    <header>
+        <div class="name-title">
+            <img src="/S.svg" alt="">
+            <img src="/A.svg" alt="">
+            <img src="/M.svg" alt="">
         </div>
-        <div class="socials"><a href="https://twitter.com/steakfi"><img src="/x.png" style="filter:invert(1);height:32px;" alt=""></a></div>
-        <div class="row">
-            <div class="steak">
-                <img src="/SteakFiLogoALPHA.png" alt="">
+        <div class="social">
+            <a href=""><img src="/TG.svg" alt=""></a>
+            <a href=""><img src="/XT.svg" alt=""></a>
+            <a href="">
+                <p>Etherscan</p>
+            </a>
+        </div>
+    </header>
+    <div class="bg">
+        <div class="main-stack">
+            <div class="hero-title">
+                <img src="/S.svg" alt="">
+                <img src="/A.svg" alt="">
+                <img src="/M.svg" alt="">
             </div>
-            <div class="text">
-                <h1>You better get <b>cookin'</b></h1>
-                <h3>Earn rewards by holding your Steak longer <br>How well? You decide.</h3>
+            <div class="row">
+                <div class="supply-info">
+                    <p>Total supply: <b>100,000,000</b></p>
+                    <p>Tax on Buy-Sell: <b>5/5</b></p>
+                </div>
+                <div class="contract-info" @click="copyToClipboard('0x912ce59144191c1204e64559fe8253a0e49e6548')">
+                    <p>Contract address: </p>
+                    <p><b>0x912ce59144191c1204e64559fe8253a0e49e6548</b> <img src="/copy.svg" alt=""></p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="button">
+                    <p>BUY</p><img src="/Arrow(2).svg" alt=""></div>
+                <div class="button">
+                    <p>CHART</p><img src="/Arrow(2).svg" alt=""></div>
+                <div class="button">
+                    <p>TELEGRAM</p><img src="/Arrow(2).svg" alt=""></div>
+                <div class="button">
+                    <p>TWITTER</p><img src="/Arrow(2).svg" alt=""></div>
             </div>
         </div>
     </div>
+    <footer>
+        <p>2024 SAM coin.</p>
+    </footer>
 </template>
 
 <script>
@@ -28,14 +59,25 @@ export default {
             docs: false,
             centerX: window.innerWidth / 2,
             centerY: window.innerHeight / 2,
-            text: '',
-            textToCopy: '',
+            text: '0x912ce59144191c1204e64559fe8253a0e49e6548',
+            textToCopy: '0x912ce59144191c1204e64559fe8253a0e49e6548 ',
         };
     },
     mounted() {
 
     },
-    methods: {},
+    methods: {
+       async copyToClipboard(text) {
+            try {
+                await navigator.clipboard.writeText(text);
+                console.log('Text copied to clipboard');
+                // Optionally, implement a notification to the user
+            } catch (err) {
+                console.error('Failed to copy: ', err);
+                // Optionally, handle the error, like showing an error message
+            }
+        },
+    },
     beforeUnmount() {
 
     },
@@ -43,91 +85,141 @@ export default {
 </script>
 
 <style lang="scss">
-@font-face {
-    font-family: 'eurostile-bold';
-    src: url('/EurostileLTStd-BoldEx2.otf') format('opentype');
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+* {
+    font-family: 'Inter', sans-serif;
 }
 
-@font-face {
-    font-family: 'eurostile';
-    src: url('/EurostileLTStd-Ex2.otf') format('opentype');
+p {
+    font-family: 'Inter', sans-serif;
 }
-
-b {
-    font-family: 'eurostile-bold', sans-serif;
-}
-
-h1,
-h2,
-h3 {
-    font-family: 'eurostile', sans-serif;
-    color: white;
-}
-
-h1 {}
 
 .bg {
     display: flex;
     flex-flow: column;
-    justify-content: center;
-    position: fixed;
-    height: 100vh;
-    background-size: cover;
-    width: 100vw;
-    background-image: url(/Background-1.png);
-}
-
-.name {
-    height: 4rem;
-    top: 0px;
-    position: fixed;
-    left: 0px;
-    padding: 1rem 2rem;
-    h2 {
-        font-size: 2rem;
-    }
-}
-
-.socials {
-    position: fixed;
-    top: 0px;
-    right: 0px;
-    padding: 1rem 2rem;
+    margin: 0rem 5.5vw;
 }
 
 .row {
+    width: 100%;
+    gap: 2rem;
     display: flex;
-    flex-flow: wrap;
+    flex-flow: row;
+    justify-content: space-between;
+    margin-bottom: 2rem;
+}
+
+.hero-title {
+    gap: 2vw;
+    display: flex;
+    flex-flow: row;
     justify-content: center;
-}
-
-@keyframes float {
-    0% {
-        transform: translatey(0px);
-    }
-    50% {
-        transform: translatey(15px);
-    }
-    100% {
-        transform: translatey(0px);
-    }
-}
-
-.steak {
-    width: 300px;
-    max-width: 90vw;
-    margin: auto 5vw;
+    margin: 4rem;
     img {
-        animation: float 5s ease infinite;
-        width: 100%;
+        height: 30vw;
     }
 }
 
-.text {
-    margin: auto 2rem;
+b {
+    font-weight: 700;
+    font-family: 'Inter', sans-serif;
 }
 
-@media (max-width: 900px) {}
+.supply-info,
+.contract-info {
+    display: flex;
+    width: calc(50% - 16px);
+    padding: 1rem 1rem;
+    flex-flow: column;
+    gap: 10px;
+    height: autol;
+    border-radius: 10px;
+    border: 1px solid #000;
+    p {
+        line-height: 1;
+    }
+}
+
+.button {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #000;
+    &:hover {
+        background: black;
+        p {
+            color: white;
+        }
+        img {
+            filter: invert(1);
+        }
+    }
+}
+
+header {
+    height: auto;
+    margin: 2rem 6vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: space-between;
+    .name-title {
+        margin: auto 0px;
+        img {
+            height: 32px;
+        }
+    }
+    .social {
+        display: flex;
+        flex-flow: row;
+        margin: auto 0px;
+        gap: 1rem;
+    }
+}
+
+footer {
+    text-align: center;
+    p {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 900px) {
+    .row {
+        width: 100%;
+        gap: 2rem;
+        display: flex;
+        flex-flow: column;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+    }
+}
+
+.supply-info,
+.contract-info {
+    display: flex;
+    width: 100%;
+    padding: 1rem 1rem;
+    flex-flow: column;
+    gap: 10px;
+    height: autol;
+    border-radius: 10px;
+    border: 1px solid #000;
+    p {
+        line-height: 1;
+        word-break: break-all;
+    }
+}
+
+.contract-info {
+    img {
+        margin-bottom: -5px;
+    }
+}
 
 /* Add styles for your video player here */
 </style>
