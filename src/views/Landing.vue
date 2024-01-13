@@ -11,8 +11,8 @@
              mouseY: 0,
              centerX: window.innerWidth / 2,
              centerY: window.innerHeight / 2,
-             text: '0x8f602eE5b1F8DE67120c427717cbe2770F3cF320',
-             textToCopy: '0x8f602eE5b1F8DE67120c427717cbe2770F3cF320',
+             text: '',
+             textToCopy: '',
          };
      },
      mounted() {
