@@ -17,16 +17,7 @@ export default {
 </script>
 
 <template>
-    <header>
-        <div class="constraint">
-    
-            <RouterLink to="/">
-              
-            </RouterLink>
-           
-        </div>
-    
-    </header>
+
     <div class="lightbox-base" :class="{ lightbox: naved }" @click="naved = false"> </div>
     <RouterView />
     <footer>

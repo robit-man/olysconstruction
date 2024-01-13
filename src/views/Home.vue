@@ -195,13 +195,14 @@ footer {
 @media (max-width: 900px) {
     .row {
         width: 100%;
-        gap: 2rem;
+        gap: 1rem;
         display: flex;
         flex-flow: column;
         justify-content: space-between;
-        margin-bottom: 2rem;
+        margin-bottom: 1rem;
     }
 }
+header{margin-bottom:unset;}
 
 .supply-info,
 .contract-info {
@@ -216,6 +217,41 @@ footer {
     p {
         line-height: 1;
         word-break: break-all;
+    }
+}
+a{width:100%;}
+.button {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 16px;
+    align-items: center;
+    gap: 2rem;
+    width: 100%;
+    cursor: pointer;
+    border-radius: 10px;
+    border: 1px solid #000;
+    p {
+        font-weight: 700;
+    }
+    &:hover {
+        background: black;
+        p {
+            color: white;
+        }
+        img {
+            filter: invert(1);
+        }
+    }
+}
+
+.hero-title {
+    gap: 2vw;
+    display: flex;
+    flex-flow: row;
+    justify-content: center;
+    margin: 2rem;
+    img {
+        height: 30vw;
     }
 }
 
