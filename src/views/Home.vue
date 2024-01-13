@@ -6,8 +6,8 @@
             <img src="/M.svg" alt="">
         </div>
         <div class="social">
-            <a href="T.me/JOINSAMTG"><img src="/TG.svg" alt=""></a>
-            <a href="Twitter.com/ethereum_sam"><img src="/XT.svg" alt=""></a>
+            <a href="https://T.me/JOINSAMTG"><img src="/TG.svg" alt=""></a>
+            <a href="https://witter.com/ethereum_sam"><img src="/XT.svg" alt=""></a>
             <a href="https://etherscan.io/address/0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d">
                 <p>Etherscan</p>
             </a>
@@ -31,19 +31,19 @@
                 </div>
             </div>
             <div class="row">
-                <a href="T.me/JOINSAMTG">
+                <a href="https://T.me/JOINSAMTG">
                     <div class="button">
                         <p>BUY</p><img src="/Arrow(2).svg" alt=""></div>
                 </a>
-                <a href="T.me/JOINSAMTG">
+                <a href="https://T.me/JOINSAMTG">
                     <div class="button">
                         <p>CHART</p><img src="/Arrow(2).svg" alt=""></div>
                 </a>
-                <a href="T.me/JOINSAMTG">
+                <a href="https://T.me/JOINSAMTG">
                     <div class="button">
                         <p>TELEGRAM</p><img src="/Arrow(2).svg" alt=""></div>
                 </a>
-                <a href="Twitter.com/ethereum_sam">
+                <a href="https://twitter.com/ethereum_sam">
                     <div class="button">
                         <p>TWITTER</p><img src="/Arrow(2).svg" alt=""></div>
                 </a>
