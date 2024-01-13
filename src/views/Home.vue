@@ -6,8 +6,8 @@
             <img src="/M.svg" alt="">
         </div>
         <div class="social">
-            <a href=""><img src="/TG.svg" alt=""></a>
-            <a href=""><img src="/XT.svg" alt=""></a>
+            <a href="T.me/JOINSAMTG"><img src="/TG.svg" alt=""></a>
+            <a href="Twitter.com/ethereum_sam"><img src="/XT.svg" alt=""></a>
             <a href="">
                 <p>Etherscan</p>
             </a>
@@ -31,19 +31,19 @@
                 </div>
             </div>
             <div class="row">
-                <div class="button">
-                    <p>BUY</p><img src="/Arrow(2).svg" alt=""></div>
-                <div class="button">
-                    <p>CHART</p><img src="/Arrow(2).svg" alt=""></div>
-                <div class="button">
-                    <p>TELEGRAM</p><img src="/Arrow(2).svg" alt=""></div>
-                <div class="button">
-                    <p>TWITTER</p><img src="/Arrow(2).svg" alt=""></div>
+             <a href="T.me/JOINSAMTG">   <div class="button">
+                    <p>BUY</p><img src="/Arrow(2).svg" alt=""></div></a> 
+              <a href="T.me/JOINSAMTG">  <div class="button">
+                    <p>CHART</p><img src="/Arrow(2).svg" alt=""></div></a> 
+                <a href="T.me/JOINSAMTG">  <div class="button">
+                    <p>TELEGRAM</p><img src="/Arrow(2).svg" alt=""></div></a> 
+             <a href="Twitter.com/ethereum_sam">   <div class="button">
+                    <p>TWITTER</p><img src="/Arrow(2).svg" alt=""></div></a> 
             </div>
         </div>
     </div>
     <footer>
-        <p>2024 SAM coin.</p>
+        <p>2024 SAM</p>
     </footer>
 </template>
 
@@ -185,6 +185,7 @@ header {
 }
 
 footer {
+    margin-top: auto;
     text-align: center;
     p {
         font-size: 0.75rem;
