@@ -31,14 +31,22 @@
                 </div>
             </div>
             <div class="row">
-             <a href="T.me/JOINSAMTG">   <div class="button">
-                    <p>BUY</p><img src="/Arrow(2).svg" alt=""></div></a> 
-              <a href="T.me/JOINSAMTG">  <div class="button">
-                    <p>CHART</p><img src="/Arrow(2).svg" alt=""></div></a> 
-                <a href="T.me/JOINSAMTG">  <div class="button">
-                    <p>TELEGRAM</p><img src="/Arrow(2).svg" alt=""></div></a> 
-             <a href="Twitter.com/ethereum_sam">   <div class="button">
-                    <p>TWITTER</p><img src="/Arrow(2).svg" alt=""></div></a> 
+                <a href="T.me/JOINSAMTG">
+                    <div class="button">
+                        <p>BUY</p><img src="/Arrow(2).svg" alt=""></div>
+                </a>
+                <a href="T.me/JOINSAMTG">
+                    <div class="button">
+                        <p>CHART</p><img src="/Arrow(2).svg" alt=""></div>
+                </a>
+                <a href="T.me/JOINSAMTG">
+                    <div class="button">
+                        <p>TELEGRAM</p><img src="/Arrow(2).svg" alt=""></div>
+                </a>
+                <a href="Twitter.com/ethereum_sam">
+                    <div class="button">
+                        <p>TWITTER</p><img src="/Arrow(2).svg" alt=""></div>
+                </a>
             </div>
         </div>
     </div>
@@ -135,6 +143,8 @@ b {
     height: autol;
     border-radius: 10px;
     border: 1px solid #000;
+    user-select: none;
+    cursor: pointer;
     p {
         line-height: 1;
     }
@@ -202,7 +212,10 @@ footer {
         margin-bottom: 1rem;
     }
 }
-header{margin-bottom:unset;}
+
+header {
+    margin-bottom: unset;
+}
 
 .supply-info,
 .contract-info {
@@ -219,7 +232,11 @@ header{margin-bottom:unset;}
         word-break: break-all;
     }
 }
-a{width:100%;}
+
+a {
+    width: 100%;
+}
+
 .button {
     display: flex;
     justify-content: space-between;
