@@ -1,4 +1,4 @@
-<🥩|🥩>
+SAM
 
 ## Project setup
 ```
