@@ -3,6 +3,7 @@
         <div class="name">
             <h2>SteakFI</h2>
         </div>
+        <div class="socials"><a href="https://twitter.com/steakfi"><img src="/x.png" style="filter:invert(1);height:32px;" alt=""></a></div>
         <div class="row">
             <div class="steak">
                 <img src="/SteakFiLogoALPHA.png" alt="">
@@ -85,6 +86,13 @@ h1 {}
     h2 {
         font-size: 2rem;
     }
+}
+
+.socials {
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    padding: 1rem 2rem;
 }
 
 .row {
