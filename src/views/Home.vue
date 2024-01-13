@@ -67,7 +67,7 @@ export default {
 
     },
     methods: {
-       async copyToClipboard(text) {
+        async copyToClipboard(text) {
             try {
                 await navigator.clipboard.writeText(text);
                 console.log('Text copied to clipboard');
@@ -150,6 +150,9 @@ b {
     cursor: pointer;
     border-radius: 10px;
     border: 1px solid #000;
+    p {
+        font-weight: 700;
+    }
     &:hover {
         background: black;
         p {
