@@ -6,7 +6,7 @@
             <img src="/M.svg" alt="">
         </div>
         <div class="social">
-            <a href="https://T.me/JOINSAMTG"><img src="/TG.svg" alt=""></a>
+            <a href="https://t.me/JOINSAMTG"><img src="/TG.svg" alt=""></a>
             <a href="https://witter.com/ethereum_sam"><img src="/XT.svg" alt=""></a>
             <a href="https://etherscan.io/address/0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d">
                 <p>Etherscan</p>
@@ -31,15 +31,15 @@
                 </div>
             </div>
             <div class="row">
-                <a href="https://T.me/JOINSAMTG">
+                <a href="https://app.uniswap.org/swap?outputCurrency=0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d">
                     <div class="button">
                         <p>BUY</p><img src="/Arrow(2).svg" alt=""></div>
                 </a>
-                <a href="https://T.me/JOINSAMTG">
+                <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x36dbeb900f4e302853a1a66218d620fe863157cb">
                     <div class="button">
                         <p>CHART</p><img src="/Arrow(2).svg" alt=""></div>
                 </a>
-                <a href="https://T.me/JOINSAMTG">
+                <a href="https://t.me/JOINSAMTG">
                     <div class="button">
                         <p>TELEGRAM</p><img src="/Arrow(2).svg" alt=""></div>
                 </a>
