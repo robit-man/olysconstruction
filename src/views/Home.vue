@@ -7,7 +7,7 @@
         </div>
         <div class="social">
             <a href="https://t.me/JOINSAMTG"><img src="/TG.svg" alt=""></a>
-            <a href="https://witter.com/ethereum_sam"><img src="/XT.svg" alt=""></a>
+            <a href="https://twitter.com/sam_ethereum"><img src="/XT.svg" alt=""></a>
             <a href="https://etherscan.io/address/0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d">
                 <p>Etherscan</p>
             </a>
@@ -43,7 +43,7 @@
                     <div class="button">
                         <p>TELEGRAM</p><img src="/Arrow(2).svg" alt=""></div>
                 </a>
-                <a href="https://twitter.com/ethereum_sam">
+                <a href="https://twitter.com/sam_ethereum">
                     <div class="button">
                         <p>TWITTER</p><img src="/Arrow(2).svg" alt=""></div>
                 </a>
