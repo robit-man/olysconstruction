@@ -73,10 +73,7 @@
                     <div class="text-block">
                         <h2>COMMERCIAL HIGH USE AREAS</h2>
                         <p>
-                            Public spaces get the same attention to detail as
-our residential projects, ensuring long lasting 
-surfaces for both wet and dry commercial 
-environments. </p>
+                            Public spaces get the same attention to detail as our residential projects, ensuring long lasting surfaces for both wet and dry commercial environments. </p>
                         <div class="button">
                             <h3>UPGRADE BUSINESS</h3>
                         </div>
@@ -89,14 +86,20 @@ environments. </p>
                     <div class="text-block">
                         <h2>Precision at every scale</h2>
                         <p>
-                            For performance and beauty, every project we
-engage gets machine level implementation. </p>
+                            For performance and beauty, every project we engage gets machine level implementation. </p>
                         <div class="button">
                             <h3>EXPLORE UPGRADES</h3>
                         </div>
                     </div>
                 </div>
     
+            </div>
+        </div>
+        <div class="zip-code-checker">
+            <div class="input-title"></div>
+            <div class="input-row">
+                <input type="number">
+                <input type="button" value="">
             </div>
         </div>
     
@@ -181,6 +184,17 @@ p {
     font-family: 'Maven Pro', sans-serif;
 }
 
+.zip-code-checker {
+    height: 300px;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    background: linear-gradient(0deg, #000 0%, #B6B6B6 100%);
+    div {
+        margin: auto;
+    }
+}
+
 .content-wrapper {
     width: 1920px;
     margin: auto;
@@ -196,7 +210,7 @@ p {
 .button {
     border: 4px solid rgba(0, 0, 0, 0.50);
     background: #FFF59F;
-    padding: 0.25rem 0.5rem;
+    padding: 0.5rem 1rem;
     width: fit-content;
     transition: all 0.2s ease;
     cursor: pointer;
@@ -261,6 +275,7 @@ p {
 
 .commercial {
     background: linear-gradient(180deg, #FFF 0%, #B6B6B6 100%);
+    padding-bottom: 10rem;
     .content-wrapper {
         gap: 8rem;
         display: flex;
@@ -376,7 +391,7 @@ header {
                 font-weight: 400;
                 line-height: normal;
                 display: flex;
-                padding: 0.25rem 0.5rem;
+                padding: 0.5rem 1rem;
                 flex-flow: column;
                 margin: auto;
                 height: 4rem;
