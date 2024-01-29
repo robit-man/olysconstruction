@@ -1,57 +1,55 @@
 <template>
     <header>
-        <div class="name-title">
-            <img src="/S.svg" alt="">
-            <img src="/A.svg" alt="">
-            <img src="/M.svg" alt="">
-        </div>
-        <div class="social">
-            <a href="https://t.me/JOINSAMTG"><img src="/TG.svg" alt=""></a>
-            <a href="https://twitter.com/sam_ethereum"><img src="/XT.svg" alt=""></a>
-            <a href="https://etherscan.io/address/0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d">
-                <p>Etherscan</p>
+        <a href="">
+            <div class="icon-header"><img src="olyicon.svg" alt=""></div>
+        </a>
+        <div class="menu-header">
+            <a href="">
+                <div class="button">
+                    <h3>GET A QUOTE</h3>
+                </div>
             </a>
+            <div class="button-ham"><img src="menu.png" alt="">
+            </div>
         </div>
     </header>
     <div class="bg">
-        <div class="main-stack">
-            <div class="hero-title">
-                <img src="/S.svg" alt="">
-                <img src="/A.svg" alt="">
-                <img src="/M.svg" alt="">
-            </div>
-            <div class="row">
-                <div class="supply-info">
-                    <p>Total supply: <b>100,000,000</b></p>
-                    <p>Tax on Buy-Sell: <b>5/5</b></p>
+    
+        <div class="hero" @mousemove="moveImage" ref="hero">
+            <div class="image-wrapper"><img :style="imageStyle" src="tile2.jpg" alt=""></div>
+            <div class="cta-row">
+                <div class="text-wrapper">
+                    <h1>OLYS CONSTRUCTION</h1>
+                    <h2>RESIDENTIAL AND COMMERCIAL RENOVATION EXPERTS</h2>
                 </div>
-                <div class="contract-info" @click="copyToClipboard('0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d')">
-                    <p>Contract address: </p>
-                    <p><b>0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d</b> <img src="/copy.svg" alt=""></p>
-                </div>
-            </div>
-            <div class="row">
-                <a href="https://app.uniswap.org/swap?outputCurrency=0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d">
-                    <div class="button">
-                        <p>BUY</p><img src="/Arrow(2).svg" alt=""></div>
-                </a>
-                <a href="https://www.dextools.io/app/en/ether/pair-explorer/0x36dbeb900f4e302853a1a66218d620fe863157cb">
-                    <div class="button">
-                        <p>CHART</p><img src="/Arrow(2).svg" alt=""></div>
-                </a>
-                <a href="https://t.me/JOINSAMTG">
-                    <div class="button">
-                        <p>TELEGRAM</p><img src="/Arrow(2).svg" alt=""></div>
-                </a>
-                <a href="https://twitter.com/sam_ethereum">
-                    <div class="button">
-                        <p>TWITTER</p><img src="/Arrow(2).svg" alt=""></div>
+                <a href="">
+                    <div class="arrow"><img src="Arrow 1.svg" alt=""></div>
                 </a>
             </div>
         </div>
+    
+    
+        <div class="residential">
+            <div class="content-wrapper">
+                <div class="row-image-first">
+                    <div class="image"><img src="image 6.png" alt=""></div>
+                    <div class="text-block">
+                        <h2>water-tight WORK</h2>
+                        <p>
+                            A variety of environments call for a range of materials. With years of completed projects under our belt, we are well versed in balance of form and function. </p>
+                        <div class="button">
+                            <h3>UPGRADE BATHROOM</h3>
+                        </div>
+                    </div>
+                </div>
+                <div class="row-image-last"></div>
+                <div class="row-image-first"></div>
+                <div class="row-image-last"></div>
+            </div>
+        </div>
+    
     </div>
     <footer>
-        <p>2024 SAM</p>
     </footer>
 </template>
 
@@ -69,12 +67,39 @@ export default {
             centerY: window.innerHeight / 2,
             text: '0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d',
             textToCopy: '0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d ',
+            imageUrl: 'path_to_your_image.jpg', // Your image URL here
+            imageStyle: {},
+            container: null,
         };
     },
     mounted() {
 
     },
     methods: {
+        moveImage(event) {
+            const heroElement = this.$refs.hero;
+            const rect = heroElement.getBoundingClientRect();
+            const x = event.clientX - rect.left - rect.width / 2;
+            const y = event.clientY - rect.top - rect.height / 2;
+
+            // Calculate rotation angles
+            const rotateX = y / rect.height * 5; // Maximum rotation in degrees
+            const rotateY = -x / rect.width * 5;
+
+            // Apply rotation
+            this.imageStyle = {
+                transform: `perspective(600px) scale(1.1) rotateX(${rotateX}deg) rotateY(${rotateY}deg `,
+            };
+        },
+        getImageDimensions() {
+            const imageElement = this.$refs.image;
+            if (imageElement) {
+                const rect = imageElement.getBoundingClientRect();
+                return { width: rect.width, height: rect.height };
+            } else {
+                return { width: 0, height: 0 };
+            }
+        },
         async copyToClipboard(text) {
             try {
                 await navigator.clipboard.writeText(text);
@@ -93,189 +118,238 @@ export default {
 </script>
 
 <style lang="scss">
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
-* {
-    font-family: 'Inter', sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Koulen&family=Maven+Pro:wght@400;600;700;900&display=swap');
+h1,
+h2,
+h3 {
+    font-family: 'Koulen', sans-serif;
 }
 
 p {
-    font-family: 'Inter', sans-serif;
+    font-family: 'Maven Pro', sans-serif;
 }
 
-.bg {
-    display: flex;
-    flex-flow: column;
-    margin: 0rem 5.5vw;
+.content-wrapper {
+    width: 1920px;
+    margin: auto;
+    padding: 4rem 0rem;
+    max-width: calc(100vw - 8rem);
 }
 
-.row {
-    width: 100%;
-    gap: 2rem;
-    display: flex;
-    flex-flow: row;
-    justify-content: space-between;
-    margin-bottom: 2rem;
-}
-
-.hero-title {
-    gap: 2vw;
+.row-image-first {
     display: flex;
     flex-flow: row;
-    justify-content: center;
-    margin: 4rem;
-    img {
-        height: 30vw;
-    }
-}
-
-b {
-    font-weight: 700;
-    font-family: 'Inter', sans-serif;
-}
-
-.supply-info,
-.contract-info {
-    display: flex;
-    width: calc(50% - 16px);
-    padding: 1rem 1rem;
-    flex-flow: column;
-    gap: 10px;
-    height: autol;
-    border-radius: 10px;
-    border: 1px solid #000;
-    user-select: none;
-    cursor: pointer;
-    p {
-        line-height: 1;
-    }
 }
 
 .button {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 16px;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
+    border: 4px solid rgba(0, 0, 0, 0.50);
+    background: #FFF59F;
+    padding: 0.5rem;
+    width: fit-content;
+    transition: all 0.2s ease;
     cursor: pointer;
-    border-radius: 10px;
-    border: 1px solid #000;
-    p {
-        font-weight: 700;
-    }
     &:hover {
         background: black;
-        p {
-            color: white;
+        color: white;
+    }
+}
+
+.row-image-last,
+.row-image-first {
+    display: flex;
+    flex-flow: row;
+    gap: 8rem;
+    justify-content: center;
+    .image {
+        overflow: hidden;
+        width: 40vw;
+        height: 40vw;
+        max-width: 100%;
+        line-height: 1;
+        transition: all 0.2s ease;
+        &:hover {
+            transform: translatey(10px);
+            box-shadow: 0px 10px 50px;
         }
         img {
-            filter: invert(1);
+            line-height: 1;
+            min-height: 100%;
+            min-width: 100%;
+        }
+        border-radius: 4px;
+        box-shadow:0px 10px 100px;
+    }
+    .text-block {
+        margin: auto 0px;
+        display: flex;
+        flex-flow: column;
+        width: 400px;
+        max-width: 50vw;
+        h2 {
+            color: #FFF;
+            font-family: Koulen;
+            font-size: 3rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 1;
+        }
+        p {
+            color: #FFF;
+            font-family: "Maven Pro";
+            font-size: 1rem;
+            margin: 2rem 0rem;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
         }
     }
 }
 
 header {
-    height: auto;
-    margin: 2rem 6vw;
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    .name-title {
-        margin: auto 0px;
-        img {
-            height: 32px;
+    width: 100vw;
+    height: 6rem;
+    position: relative;
+    border-bottom: 5px solid #000;
+    background: #FFF59F;
+    box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
+    a {
+        .icon-header {
+            img {
+                margin: auto;
+                height: 48px;
+            }
+            width: 6rem;
+            display:flex;
+            flex-flow:column;
+            height:6rem;
         }
     }
-    .social {
+    .menu-header {
         display: flex;
         flex-flow: row;
-        margin: auto 0px;
+        margin: auto 1rem;
         gap: 1rem;
+        .button-ham {
+            border: 4px solid #EEE;
+            background: #FFF;
+            color: #000;
+            font-family: 'Koulen', sans-serif;
+            font-size: 30px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            padding: 10px;
+            margin: auto;
+            height: 4rem;
+            width: 4rem;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            img {
+                height: auto;
+            }
+        }
+        a {
+            .button {
+                border: 4px solid #EEE;
+                background: #FFF;
+                color: #000;
+                font-family: 'Koulen', sans-serif;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                display: flex;
+                flex-flow: column;
+                padding: 10px;
+                margin: auto;
+                height: 4rem;
+                justify-content: center;
+                h3 {
+                    font-size: 30px;
+                    padding: unset;
+                    margin: unset;
+                    line-height: 1;
+                }
+            }
+        }
     }
 }
 
-footer {
-    margin-top: auto;
-    text-align: center;
-    p {
-        font-size: 0.75rem;
+.bg {
+    .residential {
+        background: linear-gradient(180deg, #141414 0%, #2B2B2B 100%);
+    }
+    .hero {
+        perspective: 600px;
+        height: calc(100vh - 6rem);
+        position: relative;
+        width: 100vw;
+        overflow: hidden;
+        .image-wrapper {
+            transform-style: preserve-3d;
+            position: absolute;
+            width: 100%;
+            height: inherit;
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            img {
+                display: flex;
+                position: relative;
+                width: inherit;
+                height: auto;
+                width: auto;
+            }
+        }
+        .cta-row {
+            padding: 2rem;
+            display: flex;
+            flex-flow: row;
+            justify-content: space-between;
+            height: 100%;
+            position: absolute;
+            width: 100vw;
+            .text-wrapper {
+                margin-top: auto;
+                h1 {
+                    color: #FFF59F;
+                    text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.50);
+                    font-family: 'Koulen', sans-serif;
+                    font-size: 10vw;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    line-height: 1;
+                }
+                h2 {
+                    color: #BABABA;
+                    text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.50);
+                    font-family: 'Koulen', sans-serif;
+                    font-size: 3.83vw;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    line-height: 1;
+                }
+            }
+            a {
+                margin-top: auto;
+                .arrow {
+                    img {
+                        height: 13vw;
+                    }
+                }
+            }
+        }
     }
 }
 
 @media (max-width: 900px) {
-    .row {
-        width: 100%;
-        gap: 1rem;
-        display: flex;
-        flex-flow: column;
-        justify-content: space-between;
-        margin-bottom: 1rem;
-    }
-}
-
-header {
-    margin-bottom: unset;
-}
-
-.supply-info,
-.contract-info {
-    display: flex;
-    width: 100%;
-    padding: 1rem 1rem;
-    flex-flow: column;
-    gap: 10px;
-    height: autol;
-    border-radius: 10px;
-    border: 1px solid #000;
-    p {
-        line-height: 1;
-        word-break: break-all;
-    }
-}
-
-a {
-    width: 100%;
-}
-
-.button {
-    display: flex;
-    justify-content: space-between;
-    padding: 8px 16px;
-    align-items: center;
-    gap: 2rem;
-    width: 100%;
-    cursor: pointer;
-    border-radius: 10px;
-    border: 1px solid #000;
-    p {
-        font-weight: 700;
-    }
-    &:hover {
-        background: black;
-        p {
-            color: white;
-        }
-        img {
-            filter: invert(1);
-        }
-    }
-}
-
-.hero-title {
-    gap: 2vw;
-    display: flex;
-    flex-flow: row;
-    justify-content: center;
-    margin: 2rem;
-    img {
-        height: 30vw;
-    }
-}
-
-.contract-info {
-    img {
-        margin-bottom: -5px;
-    }
+    .row {}
 }
 
 /* Add styles for your video player here */
