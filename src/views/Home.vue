@@ -42,9 +42,61 @@
                         </div>
                     </div>
                 </div>
-                <div class="row-image-last"></div>
-                <div class="row-image-first"></div>
-                <div class="row-image-last"></div>
+                <div class="row-image-last">
+                    <div class="text-block">
+                        <h2>COOKING AND CLEANING AREAS</h2>
+                        <p>
+                            Upgrading high use areas is needed as homes age. We build the most resilient back-splashes while matching or improving the desired aesthetic. </p>
+                        <div class="button">
+                            <h3>UPGRADE BACK-SPLASH</h3>
+                        </div>
+                    </div>
+                    <div class="image"><img src="image 1(1).png" alt=""></div>
+    
+                </div>
+                <div class="row-image-first">
+                    <div class="image"><img src="image 6(1).png" alt=""></div>
+                    <div class="text-block">
+                        <h2>TEMPERATURE VARIATION</h2>
+                        <p>
+                            Both indoor and outdoor fireplace upgrades bring new life to an already cozy room or patio. We ensure high temp areas are up to code, and ready for countless fireside conversations. </p>
+                        <div class="button">
+                            <h3>UPGRADE FIREPLACE</h3>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="commercial">
+            <div class="content-wrapper">
+                <div class="row-image-last">
+                    <div class="text-block">
+                        <h2>COMMERCIAL HIGH USE AREAS</h2>
+                        <p>
+                            Public spaces get the same attention to detail as
+our residential projects, ensuring long lasting 
+surfaces for both wet and dry commercial 
+environments. </p>
+                        <div class="button">
+                            <h3>UPGRADE BUSINESS</h3>
+                        </div>
+                    </div>
+                    <div class="image"><img src="image 8.png" alt=""></div>
+    
+                </div>
+                <div class="row-image-first">
+                    <div class="image"><img src="image 7(1).png" alt=""></div>
+                    <div class="text-block">
+                        <h2>Precision at every scale</h2>
+                        <p>
+                            For performance and beauty, every project we
+engage gets machine level implementation. </p>
+                        <div class="button">
+                            <h3>EXPLORE UPGRADES</h3>
+                        </div>
+                    </div>
+                </div>
+    
             </div>
         </div>
     
@@ -88,7 +140,7 @@ export default {
 
             // Apply rotation
             this.imageStyle = {
-                transform: `perspective(600px) scale(1.1) rotateX(${rotateX}deg) rotateY(${rotateY}deg `,
+                transform: `perspective(600px) scale(1.4) rotateX(${rotateX}deg) rotateY(${rotateY}deg `,
             };
         },
         getImageDimensions() {
@@ -144,10 +196,12 @@ p {
 .button {
     border: 4px solid rgba(0, 0, 0, 0.50);
     background: #FFF59F;
-    padding: 0.5rem;
+    padding: 0.25rem 0.5rem;
     width: fit-content;
     transition: all 0.2s ease;
     cursor: pointer;
+    line-height: 1.2;
+    font-size: calc(1.5rem + 0.2vw);
     &:hover {
         background: black;
         color: white;
@@ -183,12 +237,12 @@ p {
         margin: auto 0px;
         display: flex;
         flex-flow: column;
-        width: 400px;
-        max-width: 50vw;
+        width: 512px;
+        max-width: 100%;
         h2 {
             color: #FFF;
             font-family: Koulen;
-            font-size: 3rem;
+            font-size: calc(3rem + 0.2vw);
             font-style: normal;
             font-weight: 400;
             line-height: 1;
@@ -196,11 +250,70 @@ p {
         p {
             color: #FFF;
             font-family: "Maven Pro";
-            font-size: 1rem;
+            font-size: calc(1rem + 0.2vw);
             margin: 2rem 0rem;
             font-style: normal;
             font-weight: 400;
             line-height: normal;
+        }
+    }
+}
+
+.commercial {
+    background: linear-gradient(180deg, #FFF 0%, #B6B6B6 100%);
+    .content-wrapper {
+        gap: 8rem;
+        display: flex;
+        flex-flow: column;
+    }
+    .row-image-last,
+    .row-image-first {
+        display: flex;
+        flex-flow: row;
+        gap: 8rem;
+        justify-content: center;
+        .image {
+            overflow: hidden;
+            width: 40vw;
+            height: 40vw;
+            max-width: 100%;
+            line-height: 1;
+            transition: all 0.2s ease;
+            &:hover {
+                transform: translatey(10px);
+                box-shadow: 0px 10px 50px;
+            }
+            img {
+                line-height: 1;
+                min-height: 100%;
+                min-width: 100%;
+            }
+            border-radius: 4px;
+            box-shadow:0px 10px 100px #555;
+        }
+        .text-block {
+            margin: auto 0px;
+            display: flex;
+            flex-flow: column;
+            width: 512px;
+            max-width: 100%;
+            h2 {
+                color: #000;
+                font-family: Koulen;
+                font-size: calc(3rem + 0.2vw);
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1;
+            }
+            p {
+                color: #000;
+                font-family: "Maven Pro";
+                font-size: calc(1rem + 0.2vw);
+                margin: 2rem 0rem;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+            }
         }
     }
 }
@@ -263,8 +376,8 @@ header {
                 font-weight: 400;
                 line-height: normal;
                 display: flex;
+                padding: 0.25rem 0.5rem;
                 flex-flow: column;
-                padding: 10px;
                 margin: auto;
                 height: 4rem;
                 justify-content: center;
@@ -282,6 +395,11 @@ header {
 .bg {
     .residential {
         background: linear-gradient(180deg, #141414 0%, #2B2B2B 100%);
+        .content-wrapper {
+            gap: 8rem;
+            display: flex;
+            flex-flow: column;
+        }
     }
     .hero {
         perspective: 600px;
@@ -298,14 +416,14 @@ header {
             flex-flow: column;
             justify-content: center;
             img {
-                display: flex;
-                position: relative;
-                width: inherit;
+                display: block;
+                position: absolute;
                 height: auto;
-                width: auto;
+                width: 100vw;
             }
         }
         .cta-row {
+            backdrop-filter: blur(10px);
             padding: 2rem;
             display: flex;
             flex-flow: row;
@@ -313,6 +431,7 @@ header {
             height: 100%;
             position: absolute;
             width: 100vw;
+            background: linear-gradient(45deg, #111, #fff0);
             .text-wrapper {
                 margin-top: auto;
                 h1 {
@@ -349,7 +468,22 @@ header {
 }
 
 @media (max-width: 900px) {
-    .row {}
+    .row-image-last,
+    .row-image-first {
+        .image {
+            width: 80vw;
+            height: 80vw;
+            margin: auto;
+            margin-bottom: -4rem;
+        }
+        flex-flow: column;
+        img {
+            width: 100%;
+        }
+    }
+    .row-image-last {
+        flex-flow: column-reverse;
+    }
 }
 
 /* Add styles for your video player here */
