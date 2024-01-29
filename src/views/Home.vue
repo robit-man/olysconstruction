@@ -96,10 +96,72 @@
             </div>
         </div>
         <div class="zip-code-checker">
-            <div class="input-title"></div>
+            <div class="input-title">
+                <h2>Put in your zip code to SEE IF WE service Your Area!</h2>
+            </div>
             <div class="input-row">
                 <input type="number">
-                <input type="button" value="">
+                <div class="button">
+                    <h3>CHECK ZIP CODE</h3>
+                </div>
+            </div>
+        </div>
+    
+        <div class="form-section">
+            <div class="form-row-wrapper">
+                <div class="form-desc-column">
+                    <h3>LETS BUILD SOMETHING NEW!</h3>
+                    <p>Reach out to us during business hours over the phone, or any time through text or email. We will respond shortly and see how to best move forward in realizing your updrades!</p>
+                    <div class="button-row">
+                        <a href="">
+                            <div class="button">
+                                <h3>CALL US</h3>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="button">
+                                <h3>TEXT US</h3>
+                            </div>
+                        </a>
+                        <a href="">
+                            <div class="button">
+                                <h3>EMAIL US</h3>
+                            </div>
+                        </a>
+                    </div>
+                </div>
+                <div class="form-column">
+                    <form id="fs-frm" name="survey-form" accept-charset="utf-8" action="https://formspree.io/f/mzbndqbb" method="post">
+                        <fieldset id="fs-frm-inputs">
+                            <input type="text" name="name" id="full-name" placeholder="NAME" required="">
+                            <input type="email" name="_replyto" id="email-address" placeholder="EMAIL" required="">
+                            <input type="telephone" name="telephone" id="telephone" placeholder="PHONE">
+                            <fieldset id="fs-frm-selects">
+                                <label for="location">Location of project.</label>
+                                <select name="location" id="location" required="">
+                            <option value="" selected="" disabled="">Choose</option>
+                            <option value="Commercial Building">Commercial</option>
+                            <option value="Residential Building">Residential</option>
+                            <option value="Government Building">Government</option>
+                            </select>
+                                <label for="location">Type of project</label>
+                                <select name="type" id="type" required="">
+                            <option value="" selected="" disabled="">Choose</option>
+                            <option value="Indoor Fascia">Indoor Fascia</option>
+                            <option value="Outdoor Fascia">Outdoor Fascia</option>
+                            <option value="Tiling">Tiling</option>
+                            <option value="Flooring">Flooring</option>
+                            <option value="Kitchen">Kitchen</option>
+                            <option value="Bathroom">Bathroom</option>
+                            </select>
+                            </fieldset>
+                            <textarea rows="3" name="message" id="message" placeholder="PROJECT DETAILS" required=""></textarea>
+                            <input type="hidden" name="_subject" id="email-subject" value="Project Details">
+                            <div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
+                        </fieldset>
+                        <input type="submit" class="submit" value="SUBMIT REQUEST">
+                    </form>
+                </div>
             </div>
         </div>
     
@@ -184,14 +246,158 @@ p {
     font-family: 'Maven Pro', sans-serif;
 }
 
+.form-section {
+    background: black;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    padding: 4rem 0rem;
+    padding-bottom: 8rem;
+    .form-row-wrapper {
+        display: flex;
+        flex-flow: row;
+        justify-content: center;
+        gap: 8em;
+        .form-desc-column {
+            width: 512px;
+            h3 {
+                color: #fff59F;
+                font-size: 3rem;
+                line-height: 1;
+            }
+            p {
+                margin-top: 2rem;
+                color: white;
+            }
+            .button-row {
+                margin-top: 2rem;
+                display: flex;
+                flex-flow: row;
+                width: 100%;
+                gap: 2rem;
+                justify-self: space-beween;
+                a {
+                    display: flex;
+                    .button {
+                        h3 {
+                            color: black;
+                            font-size: 1.5rem;
+                        }
+                    }
+                }
+            }
+        }
+        .form-column {
+            form {
+                font-family: Koulen;
+                display: flex;
+                flex-flow: column;
+                color: white;
+                border: unset !important;
+                background: transparent;
+                .submit {
+                    width: 100%;
+                    padding: 0.5rem 0.5rem;
+                    height: auto;
+                    font-size: 1.5rem;
+                    font-family: Koulen;
+                    border: 4px solid rgba(0, 0, 0, 0.50);
+                    background: #FFF59F;
+                }
+                fieldset {
+                    display: flex;
+                    border: unset !important;
+                    background: transparent;
+                    flex-flow: column;
+                    display: flex;
+                    padding: unset;
+                    flex-flow: column;
+                    gap: 1rem;
+                    input {
+                        width: 100%;
+                        background: #1a1a1a;
+                        color: white;
+                        padding: 2rem 1rem;
+                        height: 3rem;
+                        font-size: 1.5rem;
+                        font-family: Koulen;
+                        border: 4px solid rgba(73, 73, 73, 0.50);
+                    }
+                    textarea {
+                        background: #1a1a1a;
+                        color: white;
+                        padding: 1rem 1rem;
+                        height: auto;
+                        width: 100%;
+                        font-size: 1.5rem;
+                        font-family: Koulen;
+                        border: 4px solid rgba(73, 73, 73, 0.50);
+                    }
+                    fieldset {
+                        color: white;
+                        font-size: 1rem;
+                        background: #1a1a1a;
+                        padding: 1rem;
+                        border: 4px solid rgba(73, 73, 73, 0.50) !important;
+                        label {
+                            opacity: 0.5;
+                            font-size: 1rem;
+                        }
+                        select {
+                            border-radius: unset;
+                            font-size: 1rem;
+                            font-family: Koulen;
+                            background: #fff5;
+                            border: unset;
+                            option {
+                                p {
+                                    font-family: "Maven Pro";
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
 .zip-code-checker {
-    height: 300px;
+    height: 400px;
     display: flex;
     flex-flow: column;
     justify-content: center;
     background: linear-gradient(0deg, #000 0%, #B6B6B6 100%);
     div {
         margin: auto;
+        display: flex;
+        flex-flow: row;
+        margin-top: unset;
+        &:nth-child(1) {
+            color: #FFF59F;
+            margin-bottom: 1rem;
+            margin-top: auto;
+            h2 {
+                font-size: 2.25rem;
+            }
+        }
+        input {
+            background: #B9B9B9;
+            height: 4rem;
+            width: 8rem;
+            border: 4px solid rgba(0, 0, 0, 0.50);
+            padding: 0.5rem 1rem;
+            width: fit-content;
+            transition: all 0.2s ease;
+            &:nth-child(1) {
+                width: 500px;
+                max-width: 50vw;
+            }
+        }
+        .button {
+            max-width: 50vw;
+            background: white;
+        }
     }
 }
 
