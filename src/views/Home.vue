@@ -97,14 +97,18 @@
         </div>
         <div class="zip-code-checker">
             <div class="input-title">
-                <h2>Put in your zip code to SEE IF WE service Your Area!</h2>
-            </div>
-            <div class="input-row">
-                <input type="number">
-                <div class="button">
-                    <h3>CHECK ZIP CODE</h3>
+                <div style="display:flex;flex-flow:column;">
+                    <h2>Put in your zip code to SEE IF WE service Your Area!</h2>
                 </div>
             </div>
+            <div class="input-row">
+                <input type="text" v-model="zipInput" placeholder="Enter ZIP code">
+                <div @click="checkZipCode" class="button">
+                    <h3>CHECK ZIP CODE </h3>
+                </div>
+            </div>
+            <p style="color:white;opacity:0.5;text-align:center;">{{ resultMessage }}</p>
+    
         </div>
     
         <div class="form-section">
@@ -139,21 +143,21 @@
                             <fieldset id="fs-frm-selects">
                                 <label for="location">Location of project.</label>
                                 <select name="location" id="location" required="">
-                            <option value="" selected="" disabled="">Choose</option>
-                            <option value="Commercial Building">Commercial</option>
-                            <option value="Residential Building">Residential</option>
-                            <option value="Government Building">Government</option>
-                            </select>
+                                                        <option value="" selected="" disabled="">Choose</option>
+                                                        <option value="Commercial Building">Commercial</option>
+                                                        <option value="Residential Building">Residential</option>
+                                                        <option value="Government Building">Government</option>
+                                                        </select>
                                 <label for="location">Type of project</label>
                                 <select name="type" id="type" required="">
-                            <option value="" selected="" disabled="">Choose</option>
-                            <option value="Indoor Fascia">Indoor Fascia</option>
-                            <option value="Outdoor Fascia">Outdoor Fascia</option>
-                            <option value="Tiling">Tiling</option>
-                            <option value="Flooring">Flooring</option>
-                            <option value="Kitchen">Kitchen</option>
-                            <option value="Bathroom">Bathroom</option>
-                            </select>
+                                                        <option value="" selected="" disabled="">Choose</option>
+                                                        <option value="Indoor Fascia">Indoor Fascia</option>
+                                                        <option value="Outdoor Fascia">Outdoor Fascia</option>
+                                                        <option value="Tiling">Tiling</option>
+                                                        <option value="Flooring">Flooring</option>
+                                                        <option value="Kitchen">Kitchen</option>
+                                                        <option value="Bathroom">Bathroom</option>
+                                                        </select>
                             </fieldset>
                             <textarea rows="3" name="message" id="message" placeholder="PROJECT DETAILS" required=""></textarea>
                             <input type="hidden" name="_subject" id="email-subject" value="Project Details">
@@ -187,12 +191,26 @@ export default {
             imageUrl: 'path_to_your_image.jpg', // Your image URL here
             imageStyle: {},
             container: null,
+            zipInput: '',
+            resultMessage: '',
+            servedZipCodes: [
+                '97030', '97080', '97233', // Existing ZIP codes
+                '97024', // Fairview
+                '97230', '97236', // Additional Portland ZIP codes
+                '97034', '97035', // Lake Oswego ZIP codes
+                '97219' // Portland ZIP code overlapping with Lake Oswego
+                // Add any more ZIP codes as needed
+            ],
         };
     },
     mounted() {
 
     },
     methods: {
+        checkZipCode() {
+            let areaServed = this.servedZipCodes.includes(this.zipInput);
+            this.resultMessage = areaServed ? "Area Served" : "Area Not Served";
+        },
         moveImage(event) {
             const heroElement = this.$refs.hero;
             const rect = heroElement.getBoundingClientRect();
@@ -373,6 +391,7 @@ p {
         display: flex;
         flex-flow: row;
         margin-top: unset;
+        margin-bottom: 1rem;
         &:nth-child(1) {
             color: #FFF59F;
             margin-bottom: 1rem;
