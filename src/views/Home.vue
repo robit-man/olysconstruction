@@ -143,25 +143,24 @@
                             <fieldset id="fs-frm-selects">
                                 <label for="location">Location of project.</label>
                                 <select name="location" id="location" required="">
-                                                        <option value="" selected="" disabled="">Choose</option>
-                                                        <option value="Commercial Building">Commercial</option>
-                                                        <option value="Residential Building">Residential</option>
-                                                        <option value="Government Building">Government</option>
-                                                        </select>
+                                                                                                        <option value="" selected="" disabled="">Choose</option>
+                                                                                                        <option value="Commercial Building">Commercial</option>
+                                                                                                        <option value="Residential Building">Residential</option>
+                                                                                                        <option value="Government Building">Government</option>
+                                                                                                        </select>
                                 <label for="location">Type of project</label>
                                 <select name="type" id="type" required="">
-                                                        <option value="" selected="" disabled="">Choose</option>
-                                                        <option value="Indoor Fascia">Indoor Fascia</option>
-                                                        <option value="Outdoor Fascia">Outdoor Fascia</option>
-                                                        <option value="Tiling">Tiling</option>
-                                                        <option value="Flooring">Flooring</option>
-                                                        <option value="Kitchen">Kitchen</option>
-                                                        <option value="Bathroom">Bathroom</option>
-                                                        </select>
+                                                                                                        <option value="" selected="" disabled="">Choose</option>
+                                                                                                        <option value="Indoor Fascia">Indoor Fascia</option>
+                                                                                                        <option value="Outdoor Fascia">Outdoor Fascia</option>
+                                                                                                        <option value="Tiling">Tiling</option>
+                                                                                                        <option value="Flooring">Flooring</option>
+                                                                                                        <option value="Kitchen">Kitchen</option>
+                                                                                                        <option value="Bathroom">Bathroom</option>
+                                                                                                        </select>
                             </fieldset>
                             <textarea rows="3" name="message" id="message" placeholder="PROJECT DETAILS" required=""></textarea>
                             <input type="hidden" name="_subject" id="email-subject" value="Project Details">
-                            <div data-lastpass-icon-root="true" style="position: relative !important; height: 0px !important; width: 0px !important; float: left !important;"></div>
                         </fieldset>
                         <input type="submit" class="submit" value="SUBMIT REQUEST">
                     </form>
@@ -275,7 +274,7 @@ p {
         display: flex;
         flex-flow: row;
         justify-content: center;
-        gap: 8em;
+        gap: 8rem;
         .form-desc-column {
             width: 512px;
             h3 {
@@ -498,66 +497,6 @@ p {
     }
 }
 
-.commercial {
-    background: linear-gradient(180deg, #FFF 0%, #B6B6B6 100%);
-    padding-bottom: 10rem;
-    .content-wrapper {
-        gap: 8rem;
-        display: flex;
-        flex-flow: column;
-    }
-    .row-image-last,
-    .row-image-first {
-        display: flex;
-        flex-flow: row;
-        gap: 8rem;
-        justify-content: center;
-        .image {
-            overflow: hidden;
-            width: 40vw;
-            height: 40vw;
-            max-width: 100%;
-            line-height: 1;
-            transition: all 0.2s ease;
-            &:hover {
-                transform: translatey(10px);
-                box-shadow: 0px 10px 50px;
-            }
-            img {
-                line-height: 1;
-                min-height: 100%;
-                min-width: 100%;
-            }
-            border-radius: 4px;
-            box-shadow:0px 10px 100px #555;
-        }
-        .text-block {
-            margin: auto 0px;
-            display: flex;
-            flex-flow: column;
-            width: 512px;
-            max-width: 100%;
-            h2 {
-                color: #000;
-                font-family: Koulen;
-                font-size: calc(3rem + 0.2vw);
-                font-style: normal;
-                font-weight: 400;
-                line-height: 1;
-            }
-            p {
-                color: #000;
-                font-family: "Maven Pro";
-                font-size: calc(1rem + 0.2vw);
-                margin: 2rem 0rem;
-                font-style: normal;
-                font-weight: 400;
-                line-height: normal;
-            }
-        }
-    }
-}
-
 header {
     display: flex;
     flex-flow: row;
@@ -633,6 +572,65 @@ header {
 }
 
 .bg {
+    .commercial {
+        background: linear-gradient(180deg, #FFF 0%, #B6B6B6 100%);
+        padding-bottom: 10rem;
+        .content-wrapper {
+            gap: 8rem;
+            display: flex;
+            flex-flow: column;
+        }
+        .row-image-last,
+        .row-image-first {
+            display: flex;
+            flex-flow: row;
+            gap: 8rem;
+            justify-content: center;
+            .image {
+                overflow: hidden;
+                width: 40vw;
+                height: 40vw;
+                max-width: 100%;
+                line-height: 1;
+                transition: all 0.2s ease;
+                &:hover {
+                    transform: translatey(10px);
+                    box-shadow: 0px 10px 50px;
+                }
+                img {
+                    line-height: 1;
+                    min-height: 100%;
+                    min-width: 100%;
+                }
+                border-radius: 4px;
+                box-shadow:0px 10px 100px #555;
+            }
+            .text-block {
+                margin: auto 0px;
+                display: flex;
+                flex-flow: column;
+                width: 512px;
+                max-width: 100%;
+                h2 {
+                    color: #000;
+                    font-family: Koulen;
+                    font-size: calc(3rem + 0.2vw);
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 1;
+                }
+                p {
+                    color: #000;
+                    font-family: "Maven Pro";
+                    font-size: calc(1rem + 0.2vw);
+                    margin: 2rem 0rem;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                }
+            }
+        }
+    }
     .residential {
         background: linear-gradient(180deg, #141414 0%, #2B2B2B 100%);
         .content-wrapper {
@@ -708,21 +706,241 @@ header {
 }
 
 @media (max-width: 900px) {
+    .form-section {
+        background: black;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        padding: 4rem;
+        padding-bottom: 8rem;
+        .form-row-wrapper {
+            display: flex;
+            flex-flow: column;
+            justify-content: center;
+            gap: 2rem;
+            .form-desc-column {
+                width: 512px;
+                max-width: 100%;
+                h3 {
+                    color: #fff59F;
+                    font-size: 3rem;
+                    line-height: 1;
+                }
+                p {
+                    margin-top: 2rem;
+                    color: white;
+                }
+                .button-row {
+                    margin-top: 2rem;
+                    display: flex;
+                    flex-flow: row;
+                    width: 100%;
+                    gap: 1rem;
+                    justify-self: space-beween;
+                    a {
+                        display: flex;
+                        .button {
+                            h3 {
+                                color: black;
+                                font-size: 1rem;
+                            }
+                        }
+                    }
+                }
+            }
+            .form-column {
+                form {
+                    font-family: Koulen;
+                    display: flex;
+                    flex-flow: column;
+                    color: white;
+                    border: unset !important;
+                    background: transparent;
+                    .submit {
+                        width: 100%;
+                        padding: 0.5rem 0.5rem;
+                        height: auto;
+                        font-size: 1.5rem;
+                        font-family: Koulen;
+                        border: 4px solid rgba(0, 0, 0, 0.50);
+                        background: #FFF59F;
+                    }
+                    fieldset {
+                        display: flex;
+                        border: unset !important;
+                        background: transparent;
+                        flex-flow: column;
+                        display: flex;
+                        padding: unset;
+                        flex-flow: column;
+                        gap: 1rem;
+                        input {
+                            width: 100%;
+                            background: #1a1a1a;
+                            color: white;
+                            padding: 2rem 1rem;
+                            height: 3rem;
+                            font-size: 1.5rem;
+                            font-family: Koulen;
+                            border: 4px solid rgba(73, 73, 73, 0.50);
+                        }
+                        textarea {
+                            background: #1a1a1a;
+                            color: white;
+                            padding: 1rem 1rem;
+                            height: auto;
+                            width: 100%;
+                            font-size: 1.5rem;
+                            font-family: Koulen;
+                            margin-bottom: 1rem;
+                            border: 4px solid rgba(73, 73, 73, 0.50);
+                        }
+                        fieldset {
+                            color: white;
+                            font-size: 1rem;
+                            background: #1a1a1a;
+                            padding: 1rem;
+                            border: 4px solid rgba(73, 73, 73, 0.50) !important;
+                            label {
+                                opacity: 0.5;
+                                font-size: 1rem;
+                            }
+                            select {
+                                border-radius: unset;
+                                font-size: 1rem;
+                                font-family: Koulen;
+                                background: #fff5;
+                                border: unset;
+                                option {
+                                    p {
+                                        font-family: "Maven Pro";
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+    .zip-code-checker {
+        padding: 4rem;
+        height: auto;
+        line-height: 1;
+        div {
+            flex-flow: column;
+            justify-content: center;
+            width: 100%;
+            input:nth-child(1) {
+                margin: auto;
+                margin-bottom: 1rem;
+                width: 100%;
+            }
+            .button {
+                width: 100%;
+                justify-content: center;
+                display: flex;
+                flex-flow: row;
+            }
+        }
+    }
     .row-image-last,
     .row-image-first {
         .image {
-            width: 80vw;
-            height: 80vw;
+            width: 80vw !important;
+            height: 80vw !important;
             margin: auto;
             margin-bottom: -4rem;
         }
-        flex-flow: column;
+        flex-flow: column !important;
         img {
             width: 100%;
         }
     }
     .row-image-last {
-        flex-flow: column-reverse;
+        flex-flow: column-reverse !important;
+    }
+    .commercial {
+        padding-bottom: 2rem !important;
+    }
+    .hero {
+        height: calc(100vh - 3rem) !important;
+    }
+    .cta-row {
+        padding-bottom: 20% !important;
+    }
+    header {
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        width: 100vw;
+        height: 3rem;
+        position: relative;
+        border-bottom: 5px solid #000;
+        background: #FFF59F;
+        box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
+        a {
+            .icon-header {
+                img {
+                    margin: auto;
+                    height: 24px;
+                }
+                width: 3rem;
+                display:flex;
+                flex-flow:column;
+                height:3rem;
+            }
+        }
+        .menu-header {
+            display: flex;
+            flex-flow: row;
+            margin: auto 1rem;
+            gap: 1rem;
+            .button-ham {
+                border: 4px solid #EEE;
+                background: #FFF;
+                color: #000;
+                font-family: 'Koulen', sans-serif;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                padding: 2px;
+                margin: auto;
+                height: 2rem;
+                width: 2rem;
+                display: flex;
+                flex-flow: column;
+                justify-content: center;
+                img {
+                    height: auto;
+                }
+            }
+            a {
+                .button {
+                    border: 4px solid #EEE;
+                    background: #FFF;
+                    color: #000;
+                    font-family: 'Koulen', sans-serif;
+                    font-size: 30px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: normal;
+                    display: flex;
+                    padding: 0.5rem 0.5rem;
+                    flex-flow: column;
+                    margin: auto;
+                    height: 2rem;
+                    justify-content: center;
+                    h3 {
+                        font-size: 20px;
+                        padding: unset;
+                        margin: unset;
+                        line-height: 1;
+                    }
+                }
+            }
+        }
     }
 }
 
