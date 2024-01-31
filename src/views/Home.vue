@@ -143,21 +143,21 @@
                             <fieldset id="fs-frm-selects">
                                 <label for="location">Location of project.</label>
                                 <select name="location" id="location" required="">
-                                                                                                        <option value="" selected="" disabled="">Choose</option>
-                                                                                                        <option value="Commercial Building">Commercial</option>
-                                                                                                        <option value="Residential Building">Residential</option>
-                                                                                                        <option value="Government Building">Government</option>
-                                                                                                        </select>
+                                                                                                            <option value="" selected="" disabled="">Choose</option>
+                                                                                                            <option value="Commercial Building">Commercial</option>
+                                                                                                            <option value="Residential Building">Residential</option>
+                                                                                                            <option value="Government Building">Government</option>
+                                                                                                            </select>
                                 <label for="location">Type of project</label>
                                 <select name="type" id="type" required="">
-                                                                                                        <option value="" selected="" disabled="">Choose</option>
-                                                                                                        <option value="Indoor Fascia">Indoor Fascia</option>
-                                                                                                        <option value="Outdoor Fascia">Outdoor Fascia</option>
-                                                                                                        <option value="Tiling">Tiling</option>
-                                                                                                        <option value="Flooring">Flooring</option>
-                                                                                                        <option value="Kitchen">Kitchen</option>
-                                                                                                        <option value="Bathroom">Bathroom</option>
-                                                                                                        </select>
+                                                                                                            <option value="" selected="" disabled="">Choose</option>
+                                                                                                            <option value="Indoor Fascia">Indoor Fascia</option>
+                                                                                                            <option value="Outdoor Fascia">Outdoor Fascia</option>
+                                                                                                            <option value="Tiling">Tiling</option>
+                                                                                                            <option value="Flooring">Flooring</option>
+                                                                                                            <option value="Kitchen">Kitchen</option>
+                                                                                                            <option value="Bathroom">Bathroom</option>
+                                                                                                            </select>
                             </fieldset>
                             <textarea rows="3" name="message" id="message" placeholder="PROJECT DETAILS" required=""></textarea>
                             <input type="hidden" name="_subject" id="email-subject" value="Project Details">
@@ -835,12 +835,14 @@ header {
                 margin: auto;
                 margin-bottom: 1rem;
                 width: 100%;
+                max-width: unset !important;
             }
             .button {
                 width: 100%;
                 justify-content: center;
                 display: flex;
                 flex-flow: row;
+                max-width: unset !important;
             }
         }
     }
