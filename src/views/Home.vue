@@ -18,7 +18,7 @@
     </header>
     <div class="bg">
     
-        <div class="hero" @mousemove="moveImage" ref="hero">
+        <div class="hero" ref="hero">
             <div class="image-wrapper"><img :style="imageStyle" src="tile2.jpg" alt=""></div>
             <div class="cta-row">
                 <div class="text-wrapper">
