@@ -230,8 +230,8 @@ export default {
         moveImage(event) {
             const heroElement = this.$refs.hero;
             const rect = heroElement.getBoundingClientRect();
-            const x = event.clientX - rect.left - rect.width / 5;
-            const y = event.clientY - rect.top - rect.height / 5;
+            const x = event.clientX - rect.left - rect.width / 8;
+            const y = event.clientY - rect.top - rect.height / 8;
 
             // Calculate rotation angles
             const rotateX = y / rect.height * 5; // Maximum rotation in degrees
@@ -239,7 +239,7 @@ export default {
 
             // Apply rotation
             this.imageStyle = {
-                transform: `perspective(600px) scale(1.4) translatez(-20px) rotateX(${rotateX}deg) rotateY(${rotateY}deg `,
+                transform: `perspective(600px) scale(1.4) translatez(-40px) rotateX(${rotateX}deg) rotateY(${rotateY}deg `,
             };
         },
         getImageDimensions() {
