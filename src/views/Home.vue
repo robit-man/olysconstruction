@@ -4,13 +4,16 @@
             <div class="icon-header"><img src="olyicon.svg" alt=""></div>
         </a>
         <div class="menu-header">
-            <a href="">
+            <a href="#formsec">
                 <div class="button">
                     <h3>GET A QUOTE</h3>
                 </div>
             </a>
-            <div class="button-ham"><img src="menu.png" alt="">
-            </div>
+            <a href="tel:5039074820">
+                <div class="button">
+                    <h3>CALL US</h3>
+                </div>
+            </a>
         </div>
     </header>
     <div class="bg">
@@ -22,7 +25,7 @@
                     <h1>OLYS CONSTRUCTION</h1>
                     <h2>RESIDENTIAL AND COMMERCIAL RENOVATION EXPERTS</h2>
                 </div>
-                <a href="">
+                <a href="#formsec">
                     <div class="arrow"><img src="Arrow 1.svg" alt=""></div>
                 </a>
             </div>
@@ -37,9 +40,12 @@
                         <h2>water-tight WORK</h2>
                         <p>
                             A variety of environments call for a range of materials. With years of completed projects under our belt, we are well versed in balance of form and function. </p>
-                        <div class="button">
-                            <h3>UPGRADE BATHROOM</h3>
-                        </div>
+                        <a href="#formsec">
+                            <div class="button">
+                                <h3>UPGRADE BATHROOM</h3>
+                            </div>
+                        </a>
+    
                     </div>
                 </div>
                 <div class="row-image-last">
@@ -47,9 +53,12 @@
                         <h2>COOKING AND CLEANING AREAS</h2>
                         <p>
                             Upgrading high use areas is needed as homes age. We build the most resilient back-splashes while matching or improving the desired aesthetic. </p>
-                        <div class="button">
-                            <h3>UPGRADE BACK-SPLASH</h3>
-                        </div>
+                        <a href="#formsec">
+                            <div class="button">
+                                <h3>UPGRADE BACK-SPLASH</h3>
+                            </div>
+                        </a>
+    
                     </div>
                     <div class="image"><img src="image 1(1).png" alt=""></div>
     
@@ -60,9 +69,11 @@
                         <h2>TEMPERATURE VARIATION</h2>
                         <p>
                             Both indoor and outdoor fireplace upgrades bring new life to an already cozy room or patio. We ensure high temp areas are up to code, and ready for countless fireside conversations. </p>
-                        <div class="button">
-                            <h3>UPGRADE FIREPLACE</h3>
-                        </div>
+                        <a href="#formsec">
+                            <div class="button">
+                                <h3>UPGRADE FIREPLACE</h3>
+                            </div>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -71,12 +82,15 @@
             <div class="content-wrapper">
                 <div class="row-image-last">
                     <div class="text-block">
-                        <h2>COMMERCIAL HIGH USE AREAS</h2>
+                        <h2>High Humidity and Water</h2>
                         <p>
-                            Public spaces get the same attention to detail as our residential projects, ensuring long lasting surfaces for both wet and dry commercial environments. </p>
-                        <div class="button">
-                            <h3>UPGRADE BUSINESS</h3>
-                        </div>
+                            Ensuring long lasting surfaces for both wet and dry environments. </p>
+                        <a href="#formsec">
+                            <div class="button">
+                                <h3>UPGRADE BATHROOM</h3>
+                            </div>
+                        </a>
+    
                     </div>
                     <div class="image"><img src="image 8.png" alt=""></div>
     
@@ -87,9 +101,12 @@
                         <h2>Precision at every scale</h2>
                         <p>
                             For performance and beauty, every project we engage gets machine level implementation. </p>
-                        <div class="button">
-                            <h3>EXPLORE UPGRADES</h3>
-                        </div>
+                        <a href="#formsec">
+                            <div class="button">
+                                <h3>EXPLORE UPGRADES</h3>
+                            </div>
+                        </a>
+    
                     </div>
                 </div>
     
@@ -101,37 +118,43 @@
                     <h2>Put in your zip code to SEE IF WE service Your Area!</h2>
                 </div>
             </div>
+            <p style="color:white;text-align:center;  height: 2rem;color:#aed6f1;">{{ resultMessage }}</p>
+    
             <div class="input-row">
-                <input type="text" v-model="zipInput" placeholder="Enter ZIP code">
-                <div @click="checkZipCode" class="button">
+                <input type="number" v-model="zipInput" placeholder="Enter ZIP code" style="                font-family: Koulen;font-size:2rem;
+        ">
+                <div @click="checkZipCode(zipInput)" class="button">
                     <h3>CHECK ZIP CODE </h3>
                 </div>
             </div>
-            <p style="color:white;opacity:0.5;text-align:center;">{{ resultMessage }}</p>
     
         </div>
     
-        <div class="form-section">
+        <div class="form-section" id="formsec">
             <div class="form-row-wrapper">
                 <div class="form-desc-column">
                     <h3>LETS BUILD SOMETHING NEW!</h3>
                     <p>Reach out to us during business hours over the phone, or any time through text or email. We will respond shortly and see how to best move forward in realizing your updrades!</p>
                     <div class="button-row">
-                        <a href="">
+                        <a href="tel:5039074820">
                             <div class="button">
                                 <h3>CALL US</h3>
                             </div>
                         </a>
-                        <a href="">
+                        <a href="sms:5039074820">
                             <div class="button">
                                 <h3>TEXT US</h3>
                             </div>
                         </a>
-                        <a href="">
+                        <a href="mailto:olysconstruction@gmail.com">
                             <div class="button">
                                 <h3>EMAIL US</h3>
                             </div>
                         </a>
+                    </div>
+                    <div class="info" style="padding:2rem 0rem;">
+                        <h3 style="cursor:pointer;" @click="copyToClipboard(5039074820)">503-907-4820</h3><br>
+                        <h4 style="cursor:pointer;" @click="copyToClipboard('olysconstruction@gmail.com')">olysconstruction@gmail.com</h4>
                     </div>
                 </div>
                 <div class="form-column">
@@ -140,29 +163,12 @@
                             <input type="text" name="name" id="full-name" placeholder="NAME" required="">
                             <input type="email" name="_replyto" id="email-address" placeholder="EMAIL" required="">
                             <input type="telephone" name="telephone" id="telephone" placeholder="PHONE">
-                            <fieldset id="fs-frm-selects">
-                                <label for="location">Location of project.</label>
-                                <select name="location" id="location" required="">
-                                                                                                            <option value="" selected="" disabled="">Choose</option>
-                                                                                                            <option value="Commercial Building">Commercial</option>
-                                                                                                            <option value="Residential Building">Residential</option>
-                                                                                                            <option value="Government Building">Government</option>
-                                                                                                            </select>
-                                <label for="location">Type of project</label>
-                                <select name="type" id="type" required="">
-                                                                                                            <option value="" selected="" disabled="">Choose</option>
-                                                                                                            <option value="Indoor Fascia">Indoor Fascia</option>
-                                                                                                            <option value="Outdoor Fascia">Outdoor Fascia</option>
-                                                                                                            <option value="Tiling">Tiling</option>
-                                                                                                            <option value="Flooring">Flooring</option>
-                                                                                                            <option value="Kitchen">Kitchen</option>
-                                                                                                            <option value="Bathroom">Bathroom</option>
-                                                                                                            </select>
-                            </fieldset>
+                            <input type="address" name="address" id="address" placeholder="ADDRESS">
+    
                             <textarea rows="3" name="message" id="message" placeholder="PROJECT DETAILS" required=""></textarea>
                             <input type="hidden" name="_subject" id="email-subject" value="Project Details">
                         </fieldset>
-                        <input type="submit" class="submit" value="SUBMIT REQUEST">
+                        <input type="submit" class="submit" value="SEND MESSAGE">
                     </form>
                 </div>
             </div>
@@ -185,20 +191,31 @@ export default {
             docs: false,
             centerX: window.innerWidth / 2,
             centerY: window.innerHeight / 2,
-            text: '0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d',
-            textToCopy: '0x8D991cf25Db977Ad2d4da61C48373a69E4CD514d ',
+            text: '',
+            textToCopy: '5039074820',
             imageUrl: 'path_to_your_image.jpg', // Your image URL here
             imageStyle: {},
             container: null,
             zipInput: '',
             resultMessage: '',
             servedZipCodes: [
-                '97030', '97080', '97233', // Existing ZIP codes
-                '97024', // Fairview
-                '97230', '97236', // Additional Portland ZIP codes
-                '97034', '97035', // Lake Oswego ZIP codes
-                '97219' // Portland ZIP code overlapping with Lake Oswego
-                // Add any more ZIP codes as needed
+                97225, 97223, 97224, 97210, 97203, 97217, 97214, 97232, 97258, 97051, 97027, 97267,
+                97068, 97007, 97005, 97008, 97229, 97301, 97305, 97304, 97006, 97071, 97303, 97080,
+                97030, 97062, 97070, 97381, 97204, 97205, 97209, 97212, 97133, 97124, 97113, 97213,
+                97220, 97218, 97128, 97201, 97219, 97064, 97048, 97112, 97101, 97016, 97132, 97141,
+                97107, 97136, 97045, 97227, 97221, 97146, 97338, 97056, 97362, 97032, 97344, 97138,
+                97131, 97102, 97396, 97385, 97392, 97325, 97114, 97137, 97049, 97011, 97067, 97103,
+                97002, 97360, 97378, 97140, 97230, 97148, 97203, 97210, 97217, 97229, 97225, 97221,
+                97205, 97204, 97209, 97214, 97232, 97212,
+                97213, 97220, 97218, 97140, 97070, 97062, 97068, 97227, 97219, 97201, 97258, 97211,
+                97216, 97008, 97007, 97006, 97013, 97123, 97124, 97223, 97224, 97005, 97301, 97304,
+                97303, 97028, 97103, 97107, 97305, 97016, 97302, 97141, 97136, 97080, 97030, 97023,
+                97112, 97122, 97149, 97015, 97116, 97051, 97131, 97128, 97374, 97048, 97108, 97338,
+                97064, 97113, 97133, 97138, 97125, 97381, 97392, 97385, 97325, 97132, 97027, 97267,
+                97383, 97004, 97035, 97034, 97056, 97045, 97236, 97049, 97011, 97067, 97002, 97038,
+                97351, 97019, 97231, 97137, 97071, 97032, 97362, 97022, 97148, 97266, 97114, 97144,
+                97233, 97215, 97206, 97344, 97026, 97017, 97101, 97378, 97111, 97342, 97358, 97146,
+                97396, 97347, 97360, 97086,
             ],
         };
     },
@@ -206,9 +223,9 @@ export default {
 
     },
     methods: {
-        checkZipCode() {
-            let areaServed = this.servedZipCodes.includes(this.zipInput);
-            this.resultMessage = areaServed ? "Area Served" : "Area Not Served";
+        checkZipCode(zipInput) {
+            let areaServed = this.servedZipCodes.includes(zipInput);
+            this.resultMessage = areaServed ? "Area Served!" : "Area Not Served, You can still ask!";
         },
         moveImage(event) {
             const heroElement = this.$refs.hero;
@@ -255,7 +272,8 @@ export default {
 @import url('https://fonts.googleapis.com/css2?family=Koulen&family=Maven+Pro:wght@400;600;700;900&display=swap');
 h1,
 h2,
-h3 {
+h3,
+h4 {
     font-family: 'Koulen', sans-serif;
 }
 
@@ -268,18 +286,23 @@ p {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    padding: 4rem 0rem;
+    padding: 4rem;
     padding-bottom: 8rem;
     .form-row-wrapper {
         display: flex;
         flex-flow: row;
         justify-content: center;
-        gap: 8rem;
+        gap: 4rem;
         .form-desc-column {
-            width: 512px;
+            width: 600px;
             h3 {
-                color: #fff59F;
+                color: #aed6f1;
                 font-size: 3rem;
+                line-height: 1;
+            }
+            h4 {
+                color: #aed6f1;
+                font-size: 1.5rem;
                 line-height: 1;
             }
             p {
@@ -312,6 +335,7 @@ p {
                 color: white;
                 border: unset !important;
                 background: transparent;
+                min-width: 250px;
                 .submit {
                     width: 100%;
                     padding: 0.5rem 0.5rem;
@@ -319,7 +343,7 @@ p {
                     font-size: 1.5rem;
                     font-family: Koulen;
                     border: 4px solid rgba(0, 0, 0, 0.50);
-                    background: #FFF59F;
+                    background: #aed6f1;
                 }
                 fieldset {
                     display: flex;
@@ -349,6 +373,7 @@ p {
                         font-size: 1.5rem;
                         font-family: Koulen;
                         border: 4px solid rgba(73, 73, 73, 0.50);
+                        margin-bottom: 1rem;
                     }
                     fieldset {
                         color: white;
@@ -385,14 +410,15 @@ p {
     flex-flow: column;
     justify-content: center;
     background: linear-gradient(0deg, #000 0%, #B6B6B6 100%);
+    .input-row {
+        margin-top: unset;
+    }
     div {
         margin: auto;
         display: flex;
         flex-flow: row;
-        margin-top: unset;
-        margin-bottom: 1rem;
         &:nth-child(1) {
-            color: #FFF59F;
+            color: #aed6f1;
             margin-bottom: 1rem;
             margin-top: auto;
             h2 {
@@ -414,7 +440,7 @@ p {
         }
         .button {
             max-width: 50vw;
-            background: white;
+            background: #aed6f1;
         }
     }
 }
@@ -433,7 +459,7 @@ p {
 
 .button {
     border: 4px solid rgba(0, 0, 0, 0.50);
-    background: #FFF59F;
+    background: #aed6f1;
     padding: 0.5rem 1rem;
     width: fit-content;
     transition: all 0.2s ease;
@@ -441,8 +467,7 @@ p {
     line-height: 1.2;
     font-size: calc(1.5rem + 0.2vw);
     &:hover {
-        background: black;
-        color: white;
+        opacity: 0.5;
     }
 }
 
@@ -501,11 +526,11 @@ header {
     display: flex;
     flex-flow: row;
     justify-content: space-between;
-    width: 100vw;
+    width: 100%;
     height: 6rem;
     position: relative;
     border-bottom: 5px solid #000;
-    background: #FFF59F;
+    background: #aed6f1;
     box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
     a {
         .icon-header {
@@ -641,7 +666,7 @@ header {
     }
     .hero {
         perspective: 600px;
-        height: calc(100vh - 6rem);
+        height: calc(70vh - 6rem);
         position: relative;
         width: 100vw;
         overflow: hidden;
@@ -661,7 +686,6 @@ header {
             }
         }
         .cta-row {
-            backdrop-filter: blur(10px);
             padding: 2rem;
             display: flex;
             flex-flow: row;
@@ -673,7 +697,7 @@ header {
             .text-wrapper {
                 margin-top: auto;
                 h1 {
-                    color: #FFF59F;
+                    color: #aed6f1;
                     text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.50);
                     font-family: 'Koulen', sans-serif;
                     font-size: 10vw;
@@ -722,7 +746,7 @@ header {
                 width: 512px;
                 max-width: 100%;
                 h3 {
-                    color: #fff59F;
+                    color: #aed6f1;
                     font-size: 3rem;
                     line-height: 1;
                 }
@@ -763,7 +787,7 @@ header {
                         font-size: 1.5rem;
                         font-family: Koulen;
                         border: 4px solid rgba(0, 0, 0, 0.50);
-                        background: #FFF59F;
+                        background: #aed6f1;
                     }
                     fieldset {
                         display: flex;
@@ -866,7 +890,7 @@ header {
         padding-bottom: 2rem !important;
     }
     .hero {
-        height: calc(100vh - 3rem) !important;
+        height: calc(60vh - 3rem) !important;
     }
     .cta-row {
         padding-bottom: 20% !important;
@@ -879,7 +903,7 @@ header {
         height: 3rem;
         position: relative;
         border-bottom: 5px solid #000;
-        background: #FFF59F;
+        background: #aed6f1;
         box-shadow: 0px 5px 20px 0px rgba(0, 0, 0, 0.25);
         a {
             .icon-header {
