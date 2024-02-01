@@ -23,7 +23,7 @@
             <div class="cta-row">
                 <div class="text-wrapper">
                     <h1>OLYS CONSTRUCTION</h1>
-                    <h2>RESIDENTIAL AND COMMERCIAL RENOVATION EXPERTS</h2>
+                    <h2>RESIDENTIAL RENOVATION EXPERTS</h2>
                 </div>
                 <a href="#formsec">
                     <div class="arrow"><img src="Arrow 1.svg" alt=""></div>
