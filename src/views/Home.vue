@@ -122,7 +122,7 @@
     
             <div class="input-row">
                 <input type="number" v-model="zipInput" placeholder="Enter ZIP code" style="                font-family: Koulen;font-size:2rem;
-        ">
+                ">
                 <div @click="checkZipCode(zipInput)" class="button">
                     <h3>CHECK ZIP CODE </h3>
                 </div>
@@ -678,11 +678,14 @@ header {
             display: flex;
             flex-flow: column;
             justify-content: center;
+            transition: all 0.1s ease;
             img {
                 display: block;
                 position: absolute;
                 height: auto;
+                transition: all 0.1s ease;
                 width: 100vw;
+                transform: perspective(600px) scale(1.4) rotateX(0.519699deg) rotateY(2.41111deg);
             }
         }
         .cta-row {
