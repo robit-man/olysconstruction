@@ -685,7 +685,7 @@ header {
                 height: auto;
                 transition: all 0.1s ease;
                 width: 100vw;
-                transform: perspective(600px) scale(1.4) rotateX(0.519699deg) rotateY(2.41111deg);
+                transform: perspective(600px) scale(1.4) rotateX(0) rotateY(0);
             }
         }
         .cta-row {
