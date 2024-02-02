@@ -155,6 +155,13 @@
                     <div class="info" style="padding:2rem 0rem;">
                         <h3 style="cursor:pointer;" @click="copyToClipboard(5039074820)">503-907-4820</h3><br>
                         <h4 style="cursor:pointer;" @click="copyToClipboard('olysconstruction@gmail.com')">olysconstruction@gmail.com</h4>
+<a target="_blank" href="https://www.facebook.com/profile.php?id=61556272913912">
+ <h4 style="cursor:pointer;">FACEBOOK</h4>                
+</a>
+<a target="_blank" href="https://www.instagram.com/olysconstruction?igsh=bzV4cnI2dGY5YmJm">
+ <h4 style="cursor:pointer;">INSTAGRAM</h4>                
+</a>
+
                     </div>
                 </div>
                 <div class="form-column">
