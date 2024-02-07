@@ -155,12 +155,13 @@
                     <div class="info" style="padding:2rem 0rem;">
                         <h3 style="cursor:pointer;" @click="copyToClipboard(5039074820)">503-907-4820</h3><br>
                         <h4 style="cursor:pointer;" @click="copyToClipboard('olysconstruction@gmail.com')">olysconstruction@gmail.com</h4>
+                        <div class="row" style="display:flex;flex-flow:row;gap:1rem;margin:1rem 0rem;">
 <a target="_blank" href="https://www.facebook.com/profile.php?id=61556272913912">
  <h4 style="cursor:pointer;"><img style="filter:invert(1);" src="icons8-facebook.svg">  </h4>                
 </a>
 <a target="_blank" href="https://www.instagram.com/olysconstruction?igsh=bzV4cnI2dGY5YmJm">
  <h4 style="cursor:pointer;"><img style="filter:invert(1);" src="icons8-instagram.svg"></h4>           
-</a>
+</a></div>
 
                     </div>
                 </div>
@@ -336,7 +337,7 @@ p {
         }
         .form-column {
             form {
-                font-family: Koulen;
+                font-family: 'Maven Pro', sans-serif;
                 display: flex;
                 flex-flow: column;
                 color: white;
@@ -368,7 +369,7 @@ p {
                         padding: 2rem 1rem;
                         height: 3rem;
                         font-size: 1.5rem;
-                        font-family: Koulen;
+                        font-family: 'Maven Pro', sans-serif;
                         border: 4px solid rgba(73, 73, 73, 0.50);
                     }
                     textarea {
@@ -378,7 +379,7 @@ p {
                         height: auto;
                         width: 100%;
                         font-size: 1.5rem;
-                        font-family: Koulen;
+                        font-family: 'Maven Pro', sans-serif;
                         border: 4px solid rgba(73, 73, 73, 0.50);
                         margin-bottom: 1rem;
                     }
@@ -395,7 +396,7 @@ p {
                         select {
                             border-radius: unset;
                             font-size: 1rem;
-                            font-family: Koulen;
+                            font-family: 'Maven Pro', sans-serif;
                             background: #fff5;
                             border: unset;
                             option {

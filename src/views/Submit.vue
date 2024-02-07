@@ -1,5 +1,5 @@
 <template>
-    <div></div>
+    <div><h1>FORM SUBMITTED!</h1></div>
  </template>
  
  <script>

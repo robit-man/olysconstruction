@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory } from 'vue-router'
 import Home from '../views/Home.vue'
+import Submit from '../views/Submit.vue'
 import { auth } from '../firebase'
 
 const routes = [
@@ -7,6 +8,13 @@ const routes = [
     path: '/',
     name: 'Home',
     component: Home,
+    meta: {
+      requiresAuth: false
+    }
+  },{
+    path: '/',
+    name: 'Submit',
+    component: Submit,
     meta: {
       requiresAuth: false
     }
