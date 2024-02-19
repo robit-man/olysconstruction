@@ -118,7 +118,7 @@
                     <h2>Put in your zip code to SEE IF WE service Your Area!</h2>
                 </div>
             </div>
-            <p style="color:white;text-align:center;  height: 2rem;color:#aed6f1;">{{ resultMessage }}</p>
+            <p style="color:white;text-align:center;  height: auto;color:#aed6f1;">{{ resultMessage }}</p>
     
             <div class="input-row">
                 <input type="number" v-model="zipInput" placeholder="Enter ZIP code" style="                font-family: Koulen;font-size:2rem;
