@@ -35,7 +35,7 @@
         <div class="residential">
             <div class="content-wrapper">
                 <div class="row-image-first">
-                    <div class="image"><img src="image 6.png" alt=""></div>
+                    <div class="image"><img src="tilingbathroom.jpeg" alt=""></div>
                     <div class="text-block">
                         <h2>water-tight WORK</h2>
                         <p>
@@ -488,7 +488,8 @@ p {
     .image {
         overflow: hidden;
         width: 40vw;
-        height: 40vw;
+        height: 50vw;
+        display:flex;flex-flow:column;justify-content:flex-end;
         max-width: 100%;
         line-height: 1;
         transition: all 0.2s ease;
