@@ -41,7 +41,8 @@
     
                     <br><br>As a gesture of gratitude for our first-time clients, we proudly offer a generous <b style="font-weight:bold;">10% DISCOUNT</b>*, ensuring their initial experience with us is both rewarding and memorable. Trust Olys Construction
                     to bring your remodeling visions to life, one tile at a time.
-                </p>
+               <br><br><i style="font-size:0.8rem;opacity:0.8;">* The Offer Lasts Until June 2024</i>
+ </p>
             </div>
             <div class="content-wrapper">
                 <div class="row-image-first">
