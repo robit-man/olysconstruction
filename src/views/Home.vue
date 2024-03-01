@@ -132,7 +132,7 @@
     
             <div class="input-row">
                 <input type="number" v-model="zipInput" placeholder="Enter ZIP code" style="                font-family: Koulen;font-size:2rem;
-                                                                        ">
+                                                                                ">
                 <div @click="checkZipCode(zipInput)" class="button">
                     <h3>CHECK ZIP CODE </h3>
                 </div>
@@ -145,9 +145,9 @@
                 <div class="form-desc-column">
                     <h3>LETS BUILD SOMETHING NEW!</h3>
                     <p>Reach out to us during business hours over the phone, or any time through text or email. We will respond shortly and see how to best move forward in realizing your updrades!</p>
-                   <p>Our Business Hours Are
-                    <br><b style="font-weight:bold;">MON-SAT 9-5</b>
-                   </p>
+                    <p>Our Business Hours Are
+                        <br><b style="font-weight:bold;">MON-SAT 9-5</b>
+                    </p>
                     <div class="button-row">
                         <a href="tel:5039074820">
                             <div class="button">
@@ -711,88 +711,93 @@ header {
         }
     }
     .residential {
-        background-size: contain;
-        background-repeat: no-repeat;
         padding: 8rem 0rem;
-        background-blend-mode: overlay;
-        background: url(https://images.pexels.com/photos/5015450/pexels-photo-5015450.jpeg), #bbbeba;
-        .content-wrapper {
-            gap: 10rem;
-            display: flex;
-            flex-flow: column;
+    }
+    background-blend-mode: overlay;
+    background-size: cover;
+    background-repeat: no-repeat !important;
+    background-position: left;
+    background: url(https://images.pexels.com/photos/5015450/pexels-photo-5015450.jpeg),
+    #bbbeba;
+    .content-wrapper {
+        gap: 10rem;
+        display: flex;
+        flex-flow: column;
+    }
+}
+
+.hero {
+    perspective: 600px;
+    height: calc(70vh - 6rem);
+    position: relative;
+    width: 100vw;
+    overflow: hidden;
+    .image-wrapper {
+        transform-style: preserve-3d;
+        position: absolute;
+        width: 100%;
+        height: inherit;
+        display: flex;
+        flex-flow: column;
+        justify-content: center;
+        transition: all 0.1s ease;
+        img {
+            display: block;
+            position: absolute;
+            height: auto;
+            transition: all 0.1s ease;
+            width: 100vw;
+            transform: perspective(600px) scale(1.4) rotateX(0) rotateY(0);
         }
     }
-    .hero {
-        perspective: 600px;
-        height: calc(70vh - 6rem);
-        position: relative;
+    .cta-row {
+        padding: 2rem;
+        display: flex;
+        flex-flow: row;
+        justify-content: space-between;
+        height: 100%;
+        position: absolute;
         width: 100vw;
-        overflow: hidden;
-        .image-wrapper {
-            transform-style: preserve-3d;
-            position: absolute;
-            width: 100%;
-            height: inherit;
-            display: flex;
-            flex-flow: column;
-            justify-content: center;
-            transition: all 0.1s ease;
-            img {
-                display: block;
-                position: absolute;
-                height: auto;
-                transition: all 0.1s ease;
-                width: 100vw;
-                transform: perspective(600px) scale(1.4) rotateX(0) rotateY(0);
+        background: linear-gradient(45deg, #111, #fff0);
+        .text-wrapper {
+            margin-top: auto;
+            h1 {
+                color: #aed6f1;
+                text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.50);
+                font-family: 'Koulen', sans-serif;
+                font-size: 10vw;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                line-height: 1;
+            }
+            h2 {
+                color: #BABABA;
+                text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.50);
+                font-family: 'Koulen', sans-serif;
+                font-size: 3.83vw;
+                font-style: normal;
+                font-weight: 400;
+                line-height: normal;
+                line-height: 1;
             }
         }
-        .cta-row {
-            padding: 2rem;
-            display: flex;
-            flex-flow: row;
-            justify-content: space-between;
-            height: 100%;
-            position: absolute;
-            width: 100vw;
-            background: linear-gradient(45deg, #111, #fff0);
-            .text-wrapper {
-                margin-top: auto;
-                h1 {
-                    color: #aed6f1;
-                    text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.50);
-                    font-family: 'Koulen', sans-serif;
-                    font-size: 10vw;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    line-height: 1;
-                }
-                h2 {
-                    color: #BABABA;
-                    text-shadow: 0px 10px 20px rgba(0, 0, 0, 0.50);
-                    font-family: 'Koulen', sans-serif;
-                    font-size: 3.83vw;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: normal;
-                    line-height: 1;
-                }
-            }
-            a {
-                margin-top: auto;
-                .arrow {
-                    img {
-                        height: 13vw;
-                    }
+        a {
+            margin-top: auto;
+            .arrow {
+                img {
+                    height: 13vw;
                 }
             }
         }
     }
 }
 
+}
+
 @media (max-width: 900px) {
     .residential {
-        padding: 2rem 0rem!important;
+        padding: 2rem 0rem !important;
     }
     .content-wrapper {
         padding: 2rem 0rem;
