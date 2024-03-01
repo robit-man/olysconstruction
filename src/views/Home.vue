@@ -794,7 +794,7 @@ header {
     }
 }
 
-}
+
 
 @media (max-width: 900px) {
     .residential {
