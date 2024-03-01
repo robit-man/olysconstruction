@@ -32,10 +32,20 @@
         </div>
     
     
-        <div class="residential">
+        <div class="residential" style="">
+    
+            <div class="init-paragraph" style="">
+                <p style="color:#333;text-shadow:0px 0px 100px #eee;font-size:1.5rem;letter-spacing:1px;line-height:1.5;">Nestled within the vibrant landscape of Portland, Oregon, and its surrounding areas, Olys Construction stands as a hallmark of excellence in the remodeling industry.
+                    <br><br> Specializing in tiling, flooring, windows, and much more, our family-owned company brings years of collective experience and a commitment to personalized service to every project. From revitalizing kitchens to rejuvenating bathrooms,
+                    we approach each endeavor with meticulous attention to detail and a focus on exceeding client expectations.
+    
+                    <br><br>As a gesture of gratitude for our first-time clients, we proudly offer a generous <b style="font-weight:bold;">10% DISCOUNT</b>*, ensuring their initial experience with us is both rewarding and memorable. Trust Olys Construction
+                    to bring your remodeling visions to life, one tile at a time.
+                </p>
+            </div>
             <div class="content-wrapper">
                 <div class="row-image-first">
-                    <div class="image"><img style="bottom:0px;position:absolute;width:100%;" src="tilingbathroom.jpeg" alt=""></div>
+                    <div class="image"><img style="bottom:0px;position:absolute;width:100%;" src="IMG_1100.JPG" alt=""></div>
                     <div class="text-block">
                         <h2>water-tight WORK</h2>
                         <p>
@@ -64,7 +74,7 @@
     
                 </div>
                 <div class="row-image-first">
-                    <div class="image"><img style="width:100%;bottom:0px;position:absolute;" src="fireplace2.jpg" alt=""></div>
+                    <div class="image"><img style="width:100%;bottom:0px;position:absolute;" src="IMG_1099.jpg" alt=""></div>
                     <div class="text-block">
                         <h2>TEMPERATURE VARIATION</h2>
                         <p>
@@ -122,7 +132,7 @@
     
             <div class="input-row">
                 <input type="number" v-model="zipInput" placeholder="Enter ZIP code" style="                font-family: Koulen;font-size:2rem;
-                ">
+                                                                    ">
                 <div @click="checkZipCode(zipInput)" class="button">
                     <h3>CHECK ZIP CODE </h3>
                 </div>
@@ -156,13 +166,14 @@
                         <h3 style="cursor:pointer;" @click="copyToClipboard(5039074820)">503-907-4820</h3><br>
                         <h4 style="cursor:pointer;" @click="copyToClipboard('olysconstruction@gmail.com')">olysconstruction@gmail.com</h4>
                         <div class="row" style="display:flex;flex-flow:row;gap:1rem;margin:1rem 0rem;">
-<a target="_blank" href="https://www.facebook.com/profile.php?id=61556272913912">
- <h4 style="cursor:pointer;"><img style="filter:invert(1);" src="icons8-facebook.svg">  </h4>                
-</a>
-<a target="_blank" href="https://www.instagram.com/olysconstruction?igsh=bzV4cnI2dGY5YmJm">
- <h4 style="cursor:pointer;"><img style="filter:invert(1);" src="icons8-instagram.svg"></h4>           
-</a></div>
-
+                            <a target="_blank" href="https://www.facebook.com/profile.php?id=61556272913912">
+                                <h4 style="cursor:pointer;"><img style="filter:invert(1);" src="icons8-facebook.svg"> </h4>
+                            </a>
+                            <a target="_blank" href="https://www.instagram.com/olysconstruction?igsh=bzV4cnI2dGY5YmJm">
+                                <h4 style="cursor:pointer;"><img style="filter:invert(1);" src="icons8-instagram.svg"></h4>
+                            </a>
+                        </div>
+    
                     </div>
                 </div>
                 <div class="form-column">
@@ -289,8 +300,23 @@ p {
     font-family: 'Maven Pro', sans-serif;
 }
 
+.init-paragraph {
+    width: calc(1440px + 4rem);
+    margin: auto;
+    padding: 4rem 0rem 8rem;
+    max-width: calc(100vw - 8rem);
+    p {
+        padding: 4rem;
+        border-radius: 4px;
+        color: white !important;
+        border: 2px solid #1115; //box-shadow: 1px 1px #1115, 2px 2px #1115, 3px 3px #1115, 4px 4px #1115, 5px 5px #1115, 6px 6px #1115, 7px 7px #1115, 8px 8px #1115;
+        box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3333333333);
+        backdrop-filter: blur(15px)brightness(0.5);
+    }
+}
+
 .form-section {
-    background: black;
+    background: #111;
     display: flex;
     flex-flow: column;
     justify-content: center;
@@ -347,7 +373,7 @@ p {
                 .submit {
                     width: 100%;
                     padding: 0.5rem 0.5rem;
-                    height: auto;
+                    height: auto;border-radius:4px;
                     font-size: 1.5rem;
                     font-family: Koulen;
                     border: 4px solid rgba(0, 0, 0, 0.50);
@@ -360,14 +386,14 @@ p {
                     flex-flow: column;
                     display: flex;
                     padding: unset;
-                    flex-flow: column;
+                    flex-flow: column;border-radius:4px;
                     gap: 1rem;
                     input {
                         width: 100%;
                         background: #1a1a1a;
                         color: white;
                         padding: 2rem 1rem;
-                        height: 3rem;
+                        height: 3rem;border-radius:4px;
                         font-size: 1.5rem;
                         font-family: 'Maven Pro', sans-serif;
                         border: 4px solid rgba(73, 73, 73, 0.50);
@@ -376,7 +402,7 @@ p {
                         background: #1a1a1a;
                         color: white;
                         padding: 1rem 1rem;
-                        height: auto;
+                        height: auto;border-radius:4px;
                         width: 100%;
                         font-size: 1.5rem;
                         font-family: 'Maven Pro', sans-serif;
@@ -417,7 +443,7 @@ p {
     display: flex;
     flex-flow: column;
     justify-content: center;
-    background: linear-gradient(0deg, #000 0%, #B6B6B6 100%);
+    background: linear-gradient(0deg, #111 0%, #B6B6B6 100%);
     .input-row {
         margin-top: unset;
     }
@@ -448,7 +474,7 @@ p {
         }
         .button {
             max-width: 50vw;
-            background: #aed6f1;
+            background: #aed6f1;border-radius:4px;
         }
     }
 }
@@ -489,7 +515,8 @@ p {
         overflow: hidden;
         width: 40vw;
         height: 40vw;
-        max-width: 100%;
+        max-width: 720px;
+        max-height: 720px;
         line-height: 1;
         transition: all 0.2s ease;
         &:hover {
@@ -502,14 +529,19 @@ p {
             min-width: 100%;
         }
         border-radius: 4px;
-        box-shadow:0px 10px 100px;
+        box-shadow:0px 10px 100px #0005;
     }
     .text-block {
         margin: auto 0px;
         display: flex;
         flex-flow: column;
-        width: 512px;
+        width: 600px;
         max-width: 100%;
+        padding: 2rem;
+        box-shadow: 0px 10px 50px #0005;
+        border-radius: 4px;
+        backdrop-filter: blur(15px)brightness(0.5);
+        border: 2px solid #1115;
         h2 {
             color: #FFF;
             font-family: Koulen;
@@ -524,8 +556,10 @@ p {
             font-size: calc(1rem + 0.2vw);
             margin: 2rem 0rem;
             font-style: normal;
+            font-size: 1.5rem;
+            letter-spacing: 1px;
             font-weight: 400;
-            line-height: normal;
+            line-height: 1.5;
         }
     }
 }
@@ -608,8 +642,9 @@ header {
     .commercial {
         background: linear-gradient(180deg, #FFF 0%, #B6B6B6 100%);
         padding-bottom: 10rem;
+        padding: 10rem 0rem;
         .content-wrapper {
-            gap: 8rem;
+            gap: 10rem;
             display: flex;
             flex-flow: column;
         }
@@ -623,7 +658,7 @@ header {
                 overflow: hidden;
                 width: 40vw;
                 height: 40vw;
-                max-width: 100%;
+                max-width: 720px;
                 line-height: 1;
                 transition: all 0.2s ease;
                 &:hover {
@@ -636,14 +671,17 @@ header {
                     min-width: 100%;
                 }
                 border-radius: 4px;
-                box-shadow:0px 10px 100px #555;
+                box-shadow:0px 10px 100px #0005 #555;
             }
             .text-block {
                 margin: auto 0px;
                 display: flex;
                 flex-flow: column;
                 width: 512px;
-                max-width: 100%;
+                max-width: 100%;        border: 0px solid #1115;
+
+                backdrop-filter: unset !important;
+                box-shadow: unset !important;
                 h2 {
                     color: #000;
                     font-family: Koulen;
@@ -665,9 +703,13 @@ header {
         }
     }
     .residential {
-        background: linear-gradient(180deg, #141414 0%, #2B2B2B 100%);
+        background-size: contain;
+        background-repeat: no-repeat;
+        padding: 8rem 0rem;
+        background-blend-mode: overlay;
+        background: url(https://images.pexels.com/photos/5015450/pexels-photo-5015450.jpeg), #bbbeba;
         .content-wrapper {
-            gap: 8rem;
+            gap: 10rem;
             display: flex;
             flex-flow: column;
         }
@@ -741,6 +783,10 @@ header {
 }
 
 @media (max-width: 900px) {
+    .content-wrapper {
+        padding: 2rem 0rem;
+        max-width: calc(100vw - 4rem);
+    }
     .form-section {
         background: black;
         display: flex;
@@ -884,8 +930,9 @@ header {
     .row-image-last,
     .row-image-first {
         .image {
-            width: 80vw !important;
-            height: 80vw !important;
+            width: 600px !important;
+            height: 600px !important;
+            max-width: 100%;
             margin: auto;
             margin-bottom: -4rem;
         }
@@ -893,12 +940,25 @@ header {
         img {
             width: 100%;
         }
+        .text-block {
+            margin: auto;
+        }
     }
     .row-image-last {
         flex-flow: column-reverse !important;
     }
     .commercial {
         padding-bottom: 2rem !important;
+        .image {
+            max-width: 100% !important;
+            width: 600px !important;
+        }
+        .text-block {
+            margin: auto !important;
+            padding: 1rem;
+            width: 600px !important;
+            max-width: 100% !important;
+        }
     }
     .hero {
         height: calc(60vh - 3rem) !important;
