@@ -132,7 +132,7 @@
     
             <div class="input-row">
                 <input type="number" v-model="zipInput" placeholder="Enter ZIP code" style="                font-family: Koulen;font-size:2rem;
-                                                                    ">
+                                                                        ">
                 <div @click="checkZipCode(zipInput)" class="button">
                     <h3>CHECK ZIP CODE </h3>
                 </div>
@@ -145,6 +145,9 @@
                 <div class="form-desc-column">
                     <h3>LETS BUILD SOMETHING NEW!</h3>
                     <p>Reach out to us during business hours over the phone, or any time through text or email. We will respond shortly and see how to best move forward in realizing your updrades!</p>
+                   <p>Our Business Hours Are
+                    <br><b style="font-weight:bold;">MON-SAT 9-5</b>
+                   </p>
                     <div class="button-row">
                         <a href="tel:5039074820">
                             <div class="button">
@@ -373,7 +376,8 @@ p {
                 .submit {
                     width: 100%;
                     padding: 0.5rem 0.5rem;
-                    height: auto;border-radius:4px;
+                    height: auto;
+                    border-radius: 4px;
                     font-size: 1.5rem;
                     font-family: Koulen;
                     border: 4px solid rgba(0, 0, 0, 0.50);
@@ -386,14 +390,16 @@ p {
                     flex-flow: column;
                     display: flex;
                     padding: unset;
-                    flex-flow: column;border-radius:4px;
+                    flex-flow: column;
+                    border-radius: 4px;
                     gap: 1rem;
                     input {
                         width: 100%;
                         background: #1a1a1a;
                         color: white;
                         padding: 2rem 1rem;
-                        height: 3rem;border-radius:4px;
+                        height: 3rem;
+                        border-radius: 4px;
                         font-size: 1.5rem;
                         font-family: 'Maven Pro', sans-serif;
                         border: 4px solid rgba(73, 73, 73, 0.50);
@@ -402,7 +408,8 @@ p {
                         background: #1a1a1a;
                         color: white;
                         padding: 1rem 1rem;
-                        height: auto;border-radius:4px;
+                        height: auto;
+                        border-radius: 4px;
                         width: 100%;
                         font-size: 1.5rem;
                         font-family: 'Maven Pro', sans-serif;
@@ -474,7 +481,8 @@ p {
         }
         .button {
             max-width: 50vw;
-            background: #aed6f1;border-radius:4px;
+            background: #aed6f1;
+            border-radius: 4px;
         }
     }
 }
@@ -678,8 +686,8 @@ header {
                 display: flex;
                 flex-flow: column;
                 width: 512px;
-                max-width: 100%;        border: 0px solid #1115;
-
+                max-width: 100%;
+                border: 0px solid #1115;
                 backdrop-filter: unset !important;
                 box-shadow: unset !important;
                 h2 {
@@ -783,6 +791,9 @@ header {
 }
 
 @media (max-width: 900px) {
+    .residential {
+        padding: 2rem 0rem!important;
+    }
     .content-wrapper {
         padding: 2rem 0rem;
         max-width: calc(100vw - 4rem);
@@ -1037,6 +1048,21 @@ header {
                     }
                 }
             }
+        }
+    }
+    .init-paragraph {
+        width: calc(1440px + 2rem);
+        margin: auto;
+        padding: 2rem 0rem 2rem;
+        max-width: calc(100vw - 4rem);
+        p {
+            padding: 1rem;
+            font-size: 1.2rem !important;
+            border-radius: 4px;
+            color: white !important;
+            border: 2px solid #1115; //box-shadow: 1px 1px #1115, 2px 2px #1115, 3px 3px #1115, 4px 4px #1115, 5px 5px #1115, 6px 6px #1115, 7px 7px #1115, 8px 8px #1115;
+            box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.3333333333);
+            backdrop-filter: blur(15px)brightness(0.5);
         }
     }
 }
